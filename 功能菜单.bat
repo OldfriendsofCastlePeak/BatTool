@@ -1,55 +1,55 @@
 echo off
 rem All right reserved, Qing Shan Gu Ren
 
-rem ¿ªÊ¼ÑÓ³Ù±äÁ¿
+rem å¼€å§‹å»¶è¿Ÿå˜é‡.
 setlocal EnableDelayedExpansion
 
-rem ÉèÖÃ»î¶¯´úÂëÒ³£¬936´ú±íÏÔÊ¾ÖĞÎÄ
-chcp 936
+rem è®¾ç½®æ´»åŠ¨ä»£ç é¡µ,ä½¿ç”¨UTF8ç¼–ç ,ä»¥æ”¯æŒä¸­æ–‡è¾“å…¥æˆ–è¾“å‡º.
+chcp 65001
 
-rem ################################ÉèÖÃ´°¿ÚÑùÊ½Start################################
-rem ÉèÖÃ½Å±¾Ãû³Æ,Î´Ê¹ÓÃ
-set ManagerName=Ó¦ÓÃ³ÌĞò¹ÜÀí½Å±¾%date:~0,10%
+rem ################################è®¾ç½®çª—å£æ ·å¼Start################################.
+rem è®¾ç½®è„šæœ¬åç§°,æœªä½¿ç”¨.
+set ManagerName=åº”ç”¨ç¨‹åºç®¡ç†è„šæœ¬%date:~0,10%
 
-rem ÉèÖÃ´°¿Ú±êÌâÃû³Æ
-set TitleName=Ó¦ÓÃ³ÌĞò¹ÜÀí½Å±¾%date:~0,10%-%time:~0,8%
+rem è®¾ç½®çª—å£æ ‡é¢˜åç§°.
+set TitleName=åº”ç”¨ç¨‹åºç®¡ç†è„šæœ¬%date:~0,10%-%time:~0,8%
 
-rem ÉèÖÃ´°¿Ú´óĞ¡
+rem è®¾ç½®çª—å£å¤§å°.
 Mode con cols=80 lines=47
 
-rem ÉèÖÃ´°¿ÚÑùÊ½¡¢Ãû×Ö
+rem è®¾ç½®çª—å£æ ·å¼ã€åå­—.
 color 0A
 title %TitleName%
-rem ################################ÉèÖÃ´°¿ÚÑùÊ½End##################################
+rem ################################è®¾ç½®çª—å£æ ·å¼End##################################.
 
 
 
-rem ################################¶¨Òå¹¦ÄÜÊ¹ÓÃµÄ±äÁ¿Start################################
+rem ################################å®šä¹‰åŠŸèƒ½ä½¿ç”¨çš„å˜é‡Start################################.
 
-rem ÉèÖÃ×Ó²Ëµ¥·µ»ØÉÏÒ»²ã²Ëµ¥ËùÓÃµÄ°´¼ü
+rem è®¾ç½®å­èœå•è¿”å›ä¸Šä¸€å±‚èœå•æ‰€ç”¨çš„æŒ‰é”®.
 set Global_ReturnKey=0
 
-rem BlankKeyÎª5¸ö¿Õ¸ñ,ÓÃÒÔµ÷ÕûÌáÊ¾ÎÄ±¾ÑùÊ½ 
+rem BlankKeyä¸º5ä¸ªç©ºæ ¼,ç”¨ä»¥è°ƒæ•´æç¤ºæ–‡æœ¬æ ·å¼.
 set BlankKey=   
 
 
 
-rem ¶¨ÒåÈ«¾Ö¿ÉÖ´ĞĞÎÄ¼şÂ·¾¶
+rem å®šä¹‰å…¨å±€å¯æ‰§è¡Œæ–‡ä»¶è·¯å¾„.
 set Globle_ExeFileDirectory=""
 
-rem ¶¨ÒåÈ«¾Ö¿ÉÖ´ĞĞÎÄ¼şÃû
+rem å®šä¹‰å…¨å±€å¯æ‰§è¡Œæ–‡ä»¶å.
 set Globle_ExeFileName=""
 
-rem ¶¨ÒåÈ«¾Ö½áÊøÈÎÎñÃû
+rem å®šä¹‰å…¨å±€ç»“æŸä»»åŠ¡å.
 set Globle_KillTaskName=""
 
-rem ÉèÖÃÊÇ·ñ¿ªÆôµ÷ÊÔ,0±íÊ¾²»¿ªÆô,1±íÊ¾¿ªÆô
+rem è®¾ç½®æ˜¯å¦å¼€å¯è°ƒè¯•,0è¡¨ç¤ºä¸å¼€å¯,1è¡¨ç¤ºå¼€å¯.
 set bDebug=0
 
-rem ¶¨ÒåÈ«¾Ö±éÀúÊı×éµÄË÷Òı±äÁ¿
+rem å®šä¹‰å…¨å±€éå†æ•°ç»„çš„ç´¢å¼•å˜é‡.
 set Global_ArrayIndex=1
 
-rem ################################¶¨Òå¹¦ÄÜÊ¹ÓÃµÄ±äÁ¿End#################################
+rem ################################å®šä¹‰åŠŸèƒ½ä½¿ç”¨çš„å˜é‡End#################################.
 
 
 
@@ -69,43 +69,43 @@ rem ################################¶¨Òå¹¦ÄÜÊ¹ÓÃµÄ±äÁ¿End#######################
 
 
 
-rem ################################Ö÷²Ëµ¥µÄ×Ó²Ëµ¥ÄÚÈİStart################################
-set Two_Level_Menu_Array[1].TipName=ÈÕ³£Ó¦ÓÃ¹ÜÀí²Ëµ¥
+rem ################################ä¸»èœå•çš„å­èœå•å†…å®¹Start################################.
+set Two_Level_Menu_Array[1].TipName=æ—¥å¸¸åº”ç”¨ç®¡ç†èœå•
 set Two_Level_Menu_Array[1].Key=1
 set Two_Level_Menu_Array[1].MenuTag=TwoLevel1
 set Two_Level_Menu_Array[1].MenuArrayName=TwoLevelMenu1
 
-set Two_Level_Menu_Array[2].TipName=¹¤×÷Ó¦ÓÃ¹ÜÀí²Ëµ¥
+set Two_Level_Menu_Array[2].TipName=å·¥ä½œåº”ç”¨ç®¡ç†èœå•
 set Two_Level_Menu_Array[2].Key=2
 set Two_Level_Menu_Array[2].MenuTag=TwoLevel2
 set Two_Level_Menu_Array[2].MenuArrayName=TwoLevelMenu2
 
-set Two_Level_Menu_Array[3].TipName=ÓéÀÖÓ¦ÓÃ¹ÜÀí²Ëµ¥
+set Two_Level_Menu_Array[3].TipName=å¨±ä¹åº”ç”¨ç®¡ç†èœå•
 set Two_Level_Menu_Array[3].Key=3
 set Two_Level_Menu_Array[3].MenuTag=TwoLevel3
 set Two_Level_Menu_Array[3].MenuArrayName=TwoLevelMenu3
 
-set Two_Level_Menu_Array[4].TipName=½Å±¾Ó¦ÓÃ¹ÜÀí²Ëµ¥
+set Two_Level_Menu_Array[4].TipName=è„šæœ¬åº”ç”¨ç®¡ç†èœå•
 set Two_Level_Menu_Array[4].Key=4
 set Two_Level_Menu_Array[4].MenuTag=TwoLevel4
 set Two_Level_Menu_Array[4].MenuArrayName=TwoLevelMenu4
 
-set Two_Level_Menu_Array[5].TipName=½Å±¾¹¦ÄÜ¹ÜÀí²Ëµ¥
+set Two_Level_Menu_Array[5].TipName=è„šæœ¬åŠŸèƒ½ç®¡ç†èœå•
 set Two_Level_Menu_Array[5].Key=5
 set Two_Level_Menu_Array[5].MenuTag=TwoLevel5
 set Two_Level_Menu_Array[5].MenuArrayName=TwoLevelMenu5
-rem ################################Ö÷²Ëµ¥µÄ×Ó²Ëµ¥ÄÚÈİEnd##################################
+rem ################################ä¸»èœå•çš„å­èœå•å†…å®¹End##################################.
 
 
-rem Í¨Ñ¶Ó¦ÓÃ¹ÜÀí²Ëµ¥
-rem FileDirectory:±íÊ¾¿ÉÖ´ĞĞ³ÌĞòµÄËùÔÚµÄÎÄ¼şÄ¿Â¼
-rem FileName:±íÊ¾¿ÉÖ´ĞĞ³ÌĞòµÄÎÄ¼şÃû
-rem KillTaskName:=±íÊ¾¹Ø±Õ¿ÉÖ´ĞĞ³ÌĞòËùĞèÒªµÄ"½áÊøÈÎÎñÃû"
-rem TipName:ÔÚ½Å±¾²Ëµ¥µÄÌáÊ¾Ãû
-rem StartKey:Æô¶¯¿ÉÖ´ĞĞ³ÌĞòĞèÒªµÄ¹Ø¼ü×Ö
-rem CloseKey:¹Ø±Õ¿ÉÖ´ĞĞ³ÌĞòĞèÒªµÄ¹Ø¼ü×Ö
-rem OpenDirectory:´ò¿ª¿ÉÖ´ĞĞÎÄ¼şÄ¿Â¼µÄ¹Ø¼ü×Ö
-rem ################################µÚÒ»¸ö¶ş¼¶²Ëµ¥ÄÚÈİStart################################
+rem é€šè®¯åº”ç”¨ç®¡ç†èœå•.
+rem FileDirectory:è¡¨ç¤ºå¯æ‰§è¡Œç¨‹åºçš„æ‰€åœ¨çš„æ–‡ä»¶ç›®å½•.
+rem FileName:è¡¨ç¤ºå¯æ‰§è¡Œç¨‹åºçš„æ–‡ä»¶å
+rem KillTaskName:=è¡¨ç¤ºå…³é—­å¯æ‰§è¡Œç¨‹åºæ‰€éœ€è¦çš„"ç»“æŸä»»åŠ¡å".
+rem TipName:åœ¨è„šæœ¬èœå•çš„æç¤ºå.
+rem StartKey:å¯åŠ¨å¯æ‰§è¡Œç¨‹åºéœ€è¦çš„å…³é”®å­—.
+rem CloseKey:å…³é—­å¯æ‰§è¡Œç¨‹åºéœ€è¦çš„å…³é”®å­—.
+rem OpenDirectory:æ‰“å¼€å¯æ‰§è¡Œæ–‡ä»¶ç›®å½•çš„å…³é”®å­—.
+rem ################################ç¬¬ä¸€ä¸ªäºŒçº§èœå•å†…å®¹Start################################.
 set TwoLevelMenu1[1].TipName= XX
 set TwoLevelMenu1[1].FileDirectory="D:\X\XX\XXX"
 set TwoLevelMenu1[1].FileName=XXXXX.exe
@@ -113,10 +113,10 @@ set TwoLevelMenu1[1].KillTaskName="XXXXX.exe"
 set TwoLevelMenu1[1].StartKey=1
 set TwoLevelMenu1[1].CloseKey=1_1
 set TwoLevelMenu1[1].OpenDirectory=1_2
-rem ################################µÚÒ»¸ö¶ş¼¶²Ëµ¥ÄÚÈİEnd################################
+rem ################################ç¬¬ä¸€ä¸ªäºŒçº§èœå•å†…å®¹End################################.
 
-rem ¹¤×÷Ó¦ÓÃ¹ÜÀí²Ëµ¥
-rem ################################µÚ¶ş¸ö¶ş¼¶²Ëµ¥ÄÚÈİStart################################
+rem å·¥ä½œåº”ç”¨ç®¡ç†èœå•.
+rem ################################ç¬¬äºŒä¸ªäºŒçº§èœå•å†…å®¹Start################################.
 set TwoLevelMenu2[1].TipName= XX
 set TwoLevelMenu2[1].FileDirectory="D:\X\XX\XXX"
 set TwoLevelMenu2[1].FileName=XXXXX.exe
@@ -124,10 +124,10 @@ set TwoLevelMenu2[1].KillTaskName="XXXXX.exe"
 set TwoLevelMenu2[1].StartKey=1
 set TwoLevelMenu2[1].CloseKey=1_1
 set TwoLevelMenu2[1].OpenDirectory=1_2
-rem ################################µÚ¶ş¸ö¶ş¼¶²Ëµ¥ÄÚÈİEnd##################################
+rem ################################ç¬¬äºŒä¸ªäºŒçº§èœå•å†…å®¹End##################################.
 
-rem ÓéÀÖÓ¦ÓÃ¹ÜÀí²Ëµ¥
-rem ################################µÚÈı¸ö¶ş¼¶²Ëµ¥ÄÚÈİStart################################
+rem å¨±ä¹åº”ç”¨ç®¡ç†èœå•.
+rem ################################ç¬¬ä¸‰ä¸ªäºŒçº§èœå•å†…å®¹Start################################.
 set TwoLevelMenu3[1].TipName= XX
 set TwoLevelMenu3[1].FileDirectory="D:\X\XX\XXX"
 set TwoLevelMenu3[1].FileName=XXXXX.exe
@@ -135,11 +135,10 @@ set TwoLevelMenu3[1].KillTaskName="XXXXX.exe"
 set TwoLevelMenu3[1].StartKey=1
 set TwoLevelMenu3[1].CloseKey=1_1
 set TwoLevelMenu3[1].OpenDirectory=1_2
-rem ################################µÚÈı¸ö¶ş¼¶²Ëµ¥ÄÚÈİEnd##################################
+rem ################################ç¬¬ä¸‰ä¸ªäºŒçº§èœå•å†…å®¹End##################################.
 
-rem ½Å±¾¹¦ÄÜ¹ÜÀí²Ëµ¥
-rem ÕâÒ»²¿·Ö²»ÒªËæ±ã¸ü¸Ä,³ı·ÇÄãÊìÏ¤DOSÃüÁî
-rem ################################µÚËÄ¸ö¶ş¼¶²Ëµ¥ÄÚÈİStart################################
+rem è„šæœ¬åº”ç”¨ç®¡ç†èœå•.
+rem ################################ç¬¬å››ä¸ªäºŒçº§èœå•å†…å®¹Start################################.
 set TwoLevelMenu4[1].TipName= XX
 set TwoLevelMenu4[1].FileDirectory="D:\X\XX\XXX"
 set TwoLevelMenu4[1].FileName=XXXXX.exe
@@ -147,43 +146,43 @@ set TwoLevelMenu4[1].KillTaskName="XXXXX.exe"
 set TwoLevelMenu4[1].StartKey=1
 set TwoLevelMenu4[1].CloseKey=1_1
 set TwoLevelMenu4[1].OpenDirectory=1_2
-rem ################################µÚ¶ş¸ö¶ş¼¶²Ëµ¥ÄÚÈİEnd##################################
+rem ################################ç¬¬äºŒä¸ªäºŒçº§èœå•å†…å®¹End##################################.
 
 
-rem ½Å±¾¹¦ÄÜ¹ÜÀí²Ëµ¥
-rem ÕâÒ»²¿·Ö²»ÒªËæ±ã¸ü¸Ä,³ı·ÇÄãÊìÏ¤DOSÃüÁî
-rem ################################µÚ5¸ö¶ş¼¶²Ëµ¥ÄÚÈİStart################################
-set TwoLevelMenu5[1].TipName= ÅúÁ¿ÖØÃüÃû¹¦ÄÜ
+rem è„šæœ¬åŠŸèƒ½ç®¡ç†èœå•.
+rem è¿™ä¸€éƒ¨åˆ†ä¸è¦éšä¾¿æ›´æ”¹,é™¤éä½ ç†Ÿæ‚‰DOSå‘½ä»¤.
+rem ################################ç¬¬5ä¸ªäºŒçº§èœå•å†…å®¹Start################################.
+set TwoLevelMenu5[1].TipName= æ‰¹é‡é‡å‘½ååŠŸèƒ½
 set TwoLevelMenu5[1].Key=1
 set TwoLevelMenu5[1].Tag=Function_RenameFile
-rem ################################µÚ5¸ö¶ş¼¶²Ëµ¥ÄÚÈİEnd##################################
+rem ################################ç¬¬5ä¸ªäºŒçº§èœå•å†…å®¹End##################################.
 
 
 
 
 
-rem ################################Ö÷²Ëµ¥Á÷³ÌStart################################
-rem ½øÈëÖ÷²Ëµ¥Ñ¡Ôñ
+rem ################################ä¸»èœå•æµç¨‹Start################################.
+rem è¿›å…¥ä¸»èœå•é€‰æ‹©.
 :Mian_Menu
 set Global_EnterMainMenuTag=Mian_Menu
 cls
 
-rem ¿ªÊ¼Éú³É½Å±¾¹¦ÄÜ¹ÜÀí²Ëµ¥Í¼Ïñ×¢ÊÍÄÚÈİ
+rem å¼€å§‹ç”Ÿæˆè„šæœ¬åŠŸèƒ½ç®¡ç†èœå•å›¾åƒæ³¨é‡Šå†…å®¹.
 call:Function_CreateImageTip
-rem ½áÊøÉú³É½Å±¾¹¦ÄÜ¹ÜÀí²Ëµ¥Í¼Ïñ×¢ÊÍÄÚÈİ
+rem ç»“æŸç”Ÿæˆè„šæœ¬åŠŸèƒ½ç®¡ç†èœå•å›¾åƒæ³¨é‡Šå†…å®¹.
 
-rem ¿ªÊ¼Éú³ÉÖ÷²Ëµ¥ÌáÊ¾ÎÄ±¾ÄÚÈİ
+rem å¼€å§‹ç”Ÿæˆä¸»èœå•æç¤ºæ–‡æœ¬å†…å®¹.
 call :Function_CreateMainMenuTipMessage
-rem ½áÊøÉú³ÉÖ÷²Ëµ¥ÌáÊ¾ÎÄ±¾ÄÚÈİ
+rem ç»“æŸç”Ÿæˆä¸»èœå•æç¤ºæ–‡æœ¬å†…å®¹.
 
-rem ¿ªÊ¼½øĞĞÊäÈë²Ù×÷,´«Èë±äÁ¿Ãû,µ±¸Ã·½·¨Ö´ĞĞÍê±ÏÖ®ºó,¾ÍÈ·¶¨ÁËÖ´ĞĞµÄÊı×é
+rem å¼€å§‹è¿›è¡Œè¾“å…¥æ“ä½œ,ä¼ å…¥å˜é‡å,å½“è¯¥æ–¹æ³•æ‰§è¡Œå®Œæ¯•ä¹‹å,å°±ç¡®å®šäº†æ‰§è¡Œçš„æ•°ç»„.
 set Global_ArrayMenuName=
 set Global_TagName=
 call :Function_SelectTwoLevelMenu Global_ArrayMenuName Global_TagName
 
-echo Global_TagNameÎª:%Global_ArrayMenuName%
+echo Global_TagNameä¸º:%Global_ArrayMenuName%
 goto :%Global_TagName%
-rem ################################Ö÷²Ëµ¥Á÷³ÌEnd################################
+rem ################################ä¸»èœå•æµç¨‹End################################.
 
 
 
@@ -203,42 +202,42 @@ rem ################################Ö÷²Ëµ¥Á÷³ÌEnd###############################
 
 
 
-rem ################################Ó¦ÓÃ³ÌĞò¹ÜÀí²Ëµ¥Á÷³ÌStart################################
+rem ################################åº”ç”¨ç¨‹åºç®¡ç†èœå•æµç¨‹Start################################.
 :TwoLevel0
 :TwoLevel1
 :TwoLevel2
 :TwoLevel3
 :TwoLevel4
 cls
-rem ¿ªÊ¼Éú³ÉÓ¦ÓÃ³ÌĞò¹ÜÀí²Ëµ¥Í¼Ïñ×¢ÊÍÄÚÈİ
+rem å¼€å§‹ç”Ÿæˆåº”ç”¨ç¨‹åºç®¡ç†èœå•å›¾åƒæ³¨é‡Šå†…å®¹.
 call:Function_CreateImageTip
-rem ½áÊøÉú³ÉÓ¦ÓÃ³ÌĞò¹ÜÀí²Ëµ¥Í¼Ïñ×¢ÊÍÄÚÈİ
+rem ç»“æŸç”Ÿæˆåº”ç”¨ç¨‹åºç®¡ç†èœå•å›¾åƒæ³¨é‡Šå†…å®¹.
 
-rem ¿ªÊ¼Éú³ÉÓ¦ÓÃ³ÌĞò¹ÜÀí²Ëµ¥ÌáÊ¾ÎÄ±¾ÄÚÈİ
+rem å¼€å§‹ç”Ÿæˆåº”ç”¨ç¨‹åºç®¡ç†èœå•æç¤ºæ–‡æœ¬å†…å®¹.
 call:Function_CreateTipMessage Global_ArrayMenuName 1
-rem ½áÊøÉú³ÉÓ¦ÓÃ³ÌĞò¹ÜÀí²Ëµ¥ÌáÊ¾ÎÄ±¾ÄÚÈİ
+rem ç»“æŸç”Ÿæˆåº”ç”¨ç¨‹åºç®¡ç†èœå•æç¤ºæ–‡æœ¬å†…å®¹.
 
-rem ¿ªÊ¼¼àÌıÊäÈëÄÚÈİ,×¼±¸´¦Àí¶ÔÓ¦ĞÅÏ¢,µ±·½·¨Ö´ĞĞÍê±ÏÖ®ºó,±ØÒªµÄĞÅÏ¢ÒÑ¾­ÉèÖÃ
-rem OperationNumÎª0±íÊ¾·µ»ØÖ÷²Ëµ¥,Îª1±íÊ¾´ò¿ª³ÌĞò,Îª2±íÊ¾¹Ø±Õ³ÌĞò
+rem å¼€å§‹ç›‘å¬è¾“å…¥å†…å®¹,å‡†å¤‡å¤„ç†å¯¹åº”ä¿¡æ¯,å½“æ–¹æ³•æ‰§è¡Œå®Œæ¯•ä¹‹å,å¿…è¦çš„ä¿¡æ¯å·²ç»è®¾ç½®.
+rem OperationNumä¸º0è¡¨ç¤ºè¿”å›ä¸»èœå•,ä¸º1è¡¨ç¤ºæ‰“å¼€ç¨‹åº,ä¸º2è¡¨ç¤ºå…³é—­ç¨‹åº.
 set OperationNum=
 call:Function_ProcessExe Global_ArrayMenuName OperationNum
 
 if "%OperationNum%"=="0" (
     goto :%Global_EnterMainMenuTag%
 ) else if "%OperationNum%"=="1" (
-    echo Æô¶¯³ÌĞò
+    echo å¯åŠ¨ç¨‹åº
     call:Function_LauncherAPP
 ) else if "%OperationNum%"=="2" (
-    echo ¹Ø±Õ³ÌĞò
+    echo å…³é—­ç¨‹åº
     call:Function_CloseAPP
 ) else if "%OperationNum%"=="3" (
-    echo ´ò¿ªÄ¿Â¼
+    echo æ‰“å¼€ç›®å½•
     call:Function_OpenDirectory
 )
 
-rem Á÷³ÌÖ´ĞĞÍê±Ï,ÔÙ´Îµ÷µ½¸Ã¶ş¼¶²Ëµ¥¿ªÊ¼Î»ÖÃ
+rem æµç¨‹æ‰§è¡Œå®Œæ¯•,å†æ¬¡è°ƒåˆ°è¯¥äºŒçº§èœå•å¼€å§‹ä½ç½®.
 goto :TwoLevel0
-rem ################################Ó¦ÓÃ³ÌĞò¹ÜÀí²Ëµ¥Á÷³ÌEnd################################
+rem ################################åº”ç”¨ç¨‹åºç®¡ç†èœå•æµç¨‹End################################.
 
 
 
@@ -253,36 +252,36 @@ rem ################################Ó¦ÓÃ³ÌĞò¹ÜÀí²Ëµ¥Á÷³ÌEnd#####################
 
 
 
-rem ################################½Å±¾¹¦ÄÜ¹ÜÀí²Ëµ¥Á÷³ÌStart################################
+rem ################################è„šæœ¬åŠŸèƒ½ç®¡ç†èœå•æµç¨‹Start################################.
 :TwoLevel5
 cls
-rem ¿ªÊ¼Éú³É½Å±¾¹¦ÄÜ¹ÜÀí²Ëµ¥Í¼Ïñ×¢ÊÍÄÚÈİ
+rem å¼€å§‹ç”Ÿæˆè„šæœ¬åŠŸèƒ½ç®¡ç†èœå•å›¾åƒæ³¨é‡Šå†…å®¹.
 call:Function_CreateImageTip
-rem ½áÊøÉú³É½Å±¾¹¦ÄÜ¹ÜÀí²Ëµ¥Í¼Ïñ×¢ÊÍÄÚÈİ
+rem ç»“æŸç”Ÿæˆè„šæœ¬åŠŸèƒ½ç®¡ç†èœå•å›¾åƒæ³¨é‡Šå†…å®¹.
 
-rem ¿ªÊ¼Éú³ÉÓ¦ÓÃ³ÌĞò¹ÜÀí²Ëµ¥ÌáÊ¾ÎÄ±¾ÄÚÈİ
+rem å¼€å§‹ç”Ÿæˆåº”ç”¨ç¨‹åºç®¡ç†èœå•æç¤ºæ–‡æœ¬å†…å®¹.
 call:Function_CreateJSTipMessage Global_ArrayMenuName 1
-rem ½áÊøÉú³ÉÓ¦ÓÃ³ÌĞò¹ÜÀí²Ëµ¥ÌáÊ¾ÎÄ±¾ÄÚÈİ
+rem ç»“æŸç”Ÿæˆåº”ç”¨ç¨‹åºç®¡ç†èœå•æç¤ºæ–‡æœ¬å†…å®¹.
 
-rem ¿ªÊ¼¼àÌıÊäÈëÄÚÈİ,×¼±¸´¦Àí¶ÔÓ¦ĞÅÏ¢,µ±·½·¨Ö´ĞĞÍê±ÏÖ®ºó,±ØÒªµÄĞÅÏ¢ÒÑ¾­ÉèÖÃ
-rem OperationNumÎª0±íÊ¾·µ»ØÖ÷²Ëµ¥,Îª1±íÊ¾Ö´ĞĞ½Å±¾
+rem å¼€å§‹ç›‘å¬è¾“å…¥å†…å®¹,å‡†å¤‡å¤„ç†å¯¹åº”ä¿¡æ¯,å½“æ–¹æ³•æ‰§è¡Œå®Œæ¯•ä¹‹å,å¿…è¦çš„ä¿¡æ¯å·²ç»è®¾ç½®.
+rem OperationNumä¸º0è¡¨ç¤ºè¿”å›ä¸»èœå•,ä¸º1è¡¨ç¤ºæ‰§è¡Œè„šæœ¬.
 set OperationNum=
 set Global_JSTag=
 call:Function_ProcessJS Global_ArrayMenuName OperationNum Global_JSTag
 
-rem ÊäÈë²»ÄÜÎª0
+rem è¾“å…¥ä¸èƒ½ä¸º0.
 if "%OperationNum%"=="0" (
     goto :%Global_EnterMainMenuTag%
 )
 
-rem ÊäÈë²»ÄÜÎª¿Õ
+rem è¾“å…¥ä¸èƒ½ä¸ºç©º.
 if "%Global_JSTag%" NEQ "" (
     call:%Global_JSTag%
 )
 
-rem Á÷³ÌÖ´ĞĞÍê±Ï,ÔÙ´Îµ÷µ½¸Ã¶ş¼¶²Ëµ¥ÆäÊµÎ»ÖÃ
+rem æµç¨‹æ‰§è¡Œå®Œæ¯•,å†æ¬¡è°ƒåˆ°è¯¥äºŒçº§èœå•å…¶å®ä½ç½®.
 goto :TwoLevel5
-rem ################################½Å±¾¹¦ÄÜ¹ÜÀí²Ëµ¥Á÷³ÌEnd################################
+rem ################################è„šæœ¬åŠŸèƒ½ç®¡ç†èœå•æµç¨‹End################################.
 
 
 
@@ -309,20 +308,20 @@ rem ################################½Å±¾¹¦ÄÜ¹ÜÀí²Ëµ¥Á÷³ÌEnd#####################
 
 
 
-rem ################################Ö÷²Ëµ¥ÌáÊ¾ÄÚÈİ################################
-rem ################################Ö÷²Ëµ¥ÌáÊ¾ÄÚÈİ################################
-rem ################################Ö÷²Ëµ¥ÌáÊ¾ÄÚÈİ################################
-rem Éú³ÉÌáÊ¾ÎÄ±¾²Ëµ¥ÄÚÈİ
-rem Óï·¨:
-rem µÚÒ»²½:Ê¹ÓÃcall :Function_CreateMainMenuTipMessage
+rem ################################ä¸»èœå•æç¤ºå†…å®¹################################.
+rem ################################ä¸»èœå•æç¤ºå†…å®¹################################.
+rem ################################ä¸»èœå•æç¤ºå†…å®¹################################.
+rem ç”Ÿæˆæç¤ºæ–‡æœ¬èœå•å†…å®¹.
+rem è¯­æ³•:.
+rem ç¬¬ä¸€æ­¥:ä½¿ç”¨call :Function_CreateMainMenuTipMessage.
 :Function_CreateMainMenuTipMessage
 
-rem ÉèÖÃÆğÊ¼Ë÷ÒıÎª0
+rem è®¾ç½®èµ·å§‹ç´¢å¼•ä¸º0.
 set Global_ArrayIndex=1
 
 echo Tip:
 
-rem ¼ì²éÊÇ·ñÓĞ¶¨Òå
+rem æ£€æŸ¥æ˜¯å¦æœ‰å®šä¹‰.
 :Function_CreateMainMenuTipMessage0
 if defined Two_Level_Menu_Array[%Global_ArrayIndex%].TipName (
     goto :Function_CreateMainMenuTipMessage1
@@ -332,24 +331,24 @@ if defined Two_Level_Menu_Array[%Global_ArrayIndex%].TipName (
 
 :Function_CreateMainMenuTipMessage1
 
-call, echo %BlankKey%°´%%Two_Level_Menu_Array[%Global_ArrayIndex%].Key%%¼ü ½øÈë %%Two_Level_Menu_Array[%Global_ArrayIndex%].TipName%%
+call, echo %BlankKey%æŒ‰%%Two_Level_Menu_Array[%Global_ArrayIndex%].Key%%é”® è¿›å…¥ %%Two_Level_Menu_Array[%Global_ArrayIndex%].TipName%%
 
-rem Ë÷Òı¼Ó1
+rem ç´¢å¼•åŠ 1.
 set /a Global_ArrayIndex+=1
 
-rem ·µ»Ø¼ÌĞøÈ¥ÅĞ¶Ï
+rem è¿”å›ç»§ç»­å»åˆ¤æ–­.
 goto :Function_CreateMainMenuTipMessage0
 
 
 
 :Function_CreateMainMenuTipMessage2
-echo Tip:ÊäÈë¶ÔÓ¦Ö¸Áî¼´¿É½øÈë¶ÔÓ¦²Ëµ¥
+echo Tip:è¾“å…¥å¯¹åº”æŒ‡ä»¤å³å¯è¿›å…¥å¯¹åº”èœå•
 if "%bDebug%"=="1" (
-    echo ¶ş¼¶²Ëµ¥ÌáÊ¾ÄÚÈİÉú³ÉÍê³É
+    echo äºŒçº§èœå•æç¤ºå†…å®¹ç”Ÿæˆå®Œæˆ
     pause
 )
 goto :eof
-rem ################################Ö÷²Ëµ¥Éú³É¶ş¼¶²Ëµ¥ÌáÊ¾ÄÚÈİEnd################################
+rem ################################ä¸»èœå•ç”ŸæˆäºŒçº§èœå•æç¤ºå†…å®¹End################################.
 
 
 
@@ -426,57 +425,57 @@ rem ################################Ö÷²Ëµ¥Éú³É¶ş¼¶²Ëµ¥ÌáÊ¾ÄÚÈİEnd###############
 
 
 
-rem ##############################Ö÷²Ëµ¥¸ù¾İÊäÈëÑ¡ÔñÒª½øÈëµÄ¶ş¼¶²Ëµ¥##############################
-rem ##############################Ö÷²Ëµ¥¸ù¾İÊäÈëÑ¡ÔñÒª½øÈëµÄ¶ş¼¶²Ëµ¥##############################
-rem ##############################Ö÷²Ëµ¥¸ù¾İÊäÈëÑ¡ÔñÒª½øÈëµÄ¶ş¼¶²Ëµ¥##############################
-rem ¸ù¾İÊäÈëÑ¡ÔñÒªÌø×ªµÄ¶ş¼¶²Ëµ¥
-rem Óï·¨:
-rem µÚÒ»²½:Ê¹ÓÃcall::Function_SelectTwoLevelMenu ²ÎÊı1,²ÎÊı2
-rem ²ÎÊı1:²éÕÒ³öµÄÊı×éÃû
-rem ²ÎÊı2:ÒªÌø×ªµÄ±êÇ©Ãû
+rem ##############################ä¸»èœå•æ ¹æ®è¾“å…¥é€‰æ‹©è¦è¿›å…¥çš„äºŒçº§èœå•##############################.
+rem ##############################ä¸»èœå•æ ¹æ®è¾“å…¥é€‰æ‹©è¦è¿›å…¥çš„äºŒçº§èœå•##############################.
+rem ##############################ä¸»èœå•æ ¹æ®è¾“å…¥é€‰æ‹©è¦è¿›å…¥çš„äºŒçº§èœå•##############################.
+rem æ ¹æ®è¾“å…¥é€‰æ‹©è¦è·³è½¬çš„äºŒçº§èœå•.
+rem è¯­æ³•:.
+rem ç¬¬ä¸€æ­¥:ä½¿ç”¨call::Function_SelectTwoLevelMenu å‚æ•°1,å‚æ•°2.
+rem å‚æ•°1:æŸ¥æ‰¾å‡ºçš„æ•°ç»„å.
+rem å‚æ•°2:è¦è·³è½¬çš„æ ‡ç­¾å.
 
 :Function_SelectTwoLevelMenu
 set Local_TemArrayName=%1
 set Local_TemTagName=%2
 
-echo ÇëÊäÈëÖ¸ÁîÊı,°´Enter¼üÈ·ÈÏ:
+echo è¯·è¾“å…¥æŒ‡ä»¤æ•°,æŒ‰Enteré”®ç¡®è®¤:
 goto :MainMenuInput1
 
 :MainMenuInput2
-echo ÉÏÒ»´ÎÊäÈëÓĞÎó,ÇëÖØĞÂÊäÈëÖ¸ÁîÊı,°´Enter¼üÈ·ÈÏ:
+echo ä¸Šä¸€æ¬¡è¾“å…¥æœ‰è¯¯,è¯·é‡æ–°è¾“å…¥æŒ‡ä»¤æ•°,æŒ‰Enteré”®ç¡®è®¤:
 
 :MainMenuInput1
-rem ÏÈÇå¿ÕÒ»ÏÂ,²»È»FirstInputName»á´¢´æÇ°Ò»´ÎÄÚÈİ
+rem å…ˆæ¸…ç©ºä¸€ä¸‹,ä¸ç„¶FirstInputNameä¼šå‚¨å­˜å‰ä¸€æ¬¡å†…å®¹.
 set MianMenuInputValue=
 set /p MianMenuInputValue=
 
-echo ÄúÊäÈëÖ¸ÁîÊı£º%MianMenuInputValue%,¼´½«½øÈë¶ÔÓ¦²Ëµ¥.....
+echo æ‚¨è¾“å…¥æŒ‡ä»¤æ•°ï¼š%MianMenuInputValue%,å³å°†è¿›å…¥å¯¹åº”èœå•.....
 
-rem ÅÅ³ı¿ÕÄÚÈİÊäÈë
+rem æ’é™¤ç©ºå†…å®¹è¾“å…¥.
 if "%MianMenuInputValue%"=="" (
-    echo ÊäÈë¿Õ
+    echo è¾“å…¥ç©º
     goto :MainMenuInput2
 )
 
-rem ¿ªÊ¼¼ì²é½øÈëÄÄÒ»¸ö¶ş¼¶²Ëµ¥
+rem å¼€å§‹æ£€æŸ¥è¿›å…¥å“ªä¸€ä¸ªäºŒçº§èœå•.
 
 
-rem ÉèÖÃÆğÊ¼Ë÷ÒıÎª0
+rem è®¾ç½®èµ·å§‹ç´¢å¼•ä¸º0.
 set Global_ArrayIndex=1
 
 :Function_SelectTwoLevelMenu_1
 
-rem ¼ì²é¶ÔÓ¦Ë÷ÒıÓĞÎŞ¶¨Òå
+rem æ£€æŸ¥å¯¹åº”ç´¢å¼•æœ‰æ— å®šä¹‰.
 if defined Two_Level_Menu_Array[%Global_ArrayIndex%].TipName (
     goto :Function_SelectTwoLevelMenu_2
 ) else (
     goto :Function_SelectTwoLevelMenu_3
 )
 
-rem Êı×éÓĞ¶ÔÓ¦¶¨Òå,¼ì²éÊäÈë°´¼üÊÇ·ñÏàµÈ
+rem æ•°ç»„æœ‰å¯¹åº”å®šä¹‰,æ£€æŸ¥è¾“å…¥æŒ‰é”®æ˜¯å¦ç›¸ç­‰.
 :Function_SelectTwoLevelMenu_2
 
-rem »ñÈ¡Êı×éµÄKeyÖµ
+rem è·å–æ•°ç»„çš„Keyå€¼.
 call, set %Local_TemArrayName%=%%Two_Level_Menu_Array[%Global_ArrayIndex%].MenuArrayName%%
 call, set %Local_TemTagName%=%%Two_Level_Menu_Array[%Global_ArrayIndex%].MenuTag%%
 call, set Local_TemTwoLevelMenuKeyValue=%%Two_Level_Menu_Array[%Global_ArrayIndex%].Key%%
@@ -488,23 +487,23 @@ if %Local_TemTwoLevelMenuKeyValue%==%MianMenuInputValue% (
 )
 
 
-rem Ã»ÓĞ¶¨ÒåÔò·µ»Ø,ÖØĞÂ¿ªÊ¼ÊäÈë
+rem æ²¡æœ‰å®šä¹‰åˆ™è¿”å›,é‡æ–°å¼€å§‹è¾“å…¥.
 :Function_SelectTwoLevelMenu_3
 goto :MainMenuInput2
 
 
-rem ÊäÈëÖ¸ÁîÏàµÈ,¸Ä±ä´«ÈëµÄÊµ²ÎÖµ
+rem è¾“å…¥æŒ‡ä»¤ç›¸ç­‰,æ”¹å˜ä¼ å…¥çš„å®å‚å€¼.
 :Function_SelectTwoLevelMenu_4
 goto :eof
 
 
-rem ²»µÈ,Ë÷Òı+1,½øĞĞÏÂÒ»´ÎÅĞ¶Ï,
+rem ä¸ç­‰,ç´¢å¼•+1,è¿›è¡Œä¸‹ä¸€æ¬¡åˆ¤æ–­.
 :Function_SelectTwoLevelMenu_5
 set /a Global_ArrayIndex+=1
 goto :Function_SelectTwoLevelMenu_1
-rem #####################################################################################
-rem #####################################################################################
-rem #####################################################################################
+rem #####################################################################################.
+rem #####################################################################################.
+rem #####################################################################################.
 
 
 
@@ -565,57 +564,58 @@ rem ############################################################################
 
 
 
-rem ################################Éú³É³ÌĞò¹ÜÀí²Ëµ¥ÌáÊ¾ÎÄ±¾ÄÚÈİStart################################
-rem Éú³ÉÌáÊ¾ÎÄ±¾²Ëµ¥ÄÚÈİ
-rem Óï·¨:
-rem µÚÒ»²½:Ê¹ÓÃcall::Function_CreateTipMessage ²ÎÊı1
-rem ²ÎÊı1:´æÓĞ³ÌĞòÆô¶¯¹Ø±ÕĞÅÏ¢µÄÊı×éÃû³Æ
-rem ²ÎÊı2:ÓÃÓÚÉèÖÃÊÇ·ñÒªÏÔÊ¾·µ»ØÖ÷²Ëµ¥ÌáÊ¾,È¡Ö¸1ÎªÏÔÊ¾,0Îª²»ÏÔÊ¾
+rem ################################ç”Ÿæˆç¨‹åºç®¡ç†èœå•æç¤ºæ–‡æœ¬å†…å®¹Start################################.
+rem ç”Ÿæˆæç¤ºæ–‡æœ¬èœå•å†…å®¹.
+rem è¯­æ³•:.
+rem ç¬¬ä¸€æ­¥:ä½¿ç”¨call::Function_CreateTipMessage å‚æ•°1.
+rem å‚æ•°1:å­˜æœ‰ç¨‹åºå¯åŠ¨å…³é—­ä¿¡æ¯çš„æ•°ç»„åç§°.
+rem å‚æ•°2:ç”¨äºè®¾ç½®æ˜¯å¦è¦æ˜¾ç¤ºè¿”å›ä¸»èœå•æç¤º,å–æŒ‡1ä¸ºæ˜¾ç¤º,0ä¸ºä¸æ˜¾ç¤º.
 
 :Function_CreateTipMessage
 call,set Local_TemTwoLevelMenuName=%%%1%%
 set Local_ShowMainMenuTip=%2
 
-rem ÉèÖÃÆğÊ¼Ë÷ÒıÎª1
+rem è®¾ç½®èµ·å§‹ç´¢å¼•ä¸º1.
 set Global_ArrayIndex=1
 
-
 echo Tip:
-rem ÊÇ·ñÏÔÊ¾ ·µ»ØÖ÷²Ëµ¥ÌáÊ¾ÎÄ±¾
+rem æ˜¯å¦æ˜¾ç¤º è¿”å›ä¸»èœå•æç¤ºæ–‡æœ¬.
 if "%Local_ShowMainMenuTip%"=="1" (
-    echo %BlankKey%°´%Global_ReturnKey%¼ü·µ»ØÖ÷²Ëµ¥
+    echo %BlankKey%æŒ‰%Global_ReturnKey%é”®è¿”å›ä¸»èœå•
 )
 
-rem //¼ì²âÊÇ·ñÓĞ¶¨ÒåÆäÔªËØ
-:Function_CreateTipMessage0
-if defined %Local_TemTwoLevelMenuName%[%Global_ArrayIndex%].TipName (
-    goto :Function_CreateTipMessage1
-) else (
-    goto :Function_CreateTipMessage2
-)
-
+rem æ£€æµ‹æ˜¯å¦æœ‰å®šä¹‰å…¶å…ƒç´ .
 :Function_CreateTipMessage1
+
+
+if defined %Local_TemTwoLevelMenuName%[%Global_ArrayIndex%].TipName (
+    goto :Function_CreateTipMessage2
+) else (
+    goto :Function_CreateTipMessage3
+)
+
+:Function_CreateTipMessage2
 call,set Local_StartKeyValue=%%%Local_TemTwoLevelMenuName%[%Global_ArrayIndex%].StartKey%%
 call,set Local_CloseKeyValue=%%%Local_TemTwoLevelMenuName%[%Global_ArrayIndex%].CloseKey%%
 call,set Local_TipNameValue=%%%Local_TemTwoLevelMenuName%[%Global_ArrayIndex%].TipName%%
-rem echo ÖµÎª:%Local_StartKeyValue%  %Local_CloseKeyValue%  %Local_TipNameValue%
-echo %BlankKey%°´%Local_StartKeyValue%¼üÆô¶¯ °´%Local_CloseKeyValue%¼ü¹Ø±Õ%Local_TipNameValue%
+echo %BlankKey%æŒ‰%Local_StartKeyValue%é”®å¯åŠ¨ æŒ‰%Local_CloseKeyValue%é”®å…³é—­%Local_TipNameValue%
 
-rem Ë÷Òı¼Ó1
+rem ç´¢å¼•åŠ 1.
 set /a Global_ArrayIndex+=1
 
-rem ·µ»Ø¼ÌĞøÈ¥ÅĞ¶Ï
-goto :Function_CreateTipMessage0
+rem è¿”å›ç»§ç»­å»åˆ¤æ–­.
+goto :Function_CreateTipMessage1
 
-:Function_CreateTipMessage2
-echo Tip:ÊäÈë¶ÔÓ¦Ö¸Áî¼´¿É´ò¿ª»ò¹Ø±ÕÓ¦ÓÃ
+:Function_CreateTipMessage3
+echo Tip:è¾“å…¥å¯¹åº”æŒ‡ä»¤å³å¯æ‰“å¼€æˆ–å…³é—­åº”ç”¨
+
 if "%bDebug%"=="1" (
-    echo Ó¦ÓÃ³ÌĞò¹ÜÀí²Ëµ¥ÌáÊ¾ÎÄ±¾ÄÚÈİÉú³ÉÍê³É
+    echo åº”ç”¨ç¨‹åºç®¡ç†èœå•æç¤ºæ–‡æœ¬å†…å®¹ç”Ÿæˆå®Œæˆ
     pause
 )
 
 goto :eof
-rem ################################Éú³ÉÓ¦ÓÃ³ÌĞò¹ÜÀí²Ëµ¥ÌáÊ¾ÎÄ±¾ÄÚÈİStart################################
+rem ################################ç”Ÿæˆåº”ç”¨ç¨‹åºç®¡ç†èœå•æç¤ºæ–‡æœ¬å†…å®¹Start################################.
 
 
 
@@ -636,71 +636,76 @@ rem ################################Éú³ÉÓ¦ÓÃ³ÌĞò¹ÜÀí²Ëµ¥ÌáÊ¾ÎÄ±¾ÄÚÈİStart#######
 
 
 
-rem ##############################¶ş²Ëµ¥¸ù¾İÊäÈëÑ¡ÔñÒª½øÈëµÄ²Ù×÷##############################
-rem ##############################¶ş²Ëµ¥¸ù¾İÊäÈëÑ¡ÔñÒª½øÈëµÄ²Ù×÷##############################
-rem ##############################¶ş²Ëµ¥¸ù¾İÊäÈëÑ¡ÔñÒª½øÈëµÄ²Ù×÷##############################
-rem ¶ş²Ëµ¥¸ù¾İÊäÈëÑ¡ÔñÒª½øÈëµÄ²Ù×÷
-rem Óï·¨:
-rem µÚÒ»²½:Ê¹ÓÃcall::Function_ProcessExe ²ÎÊı1,²ÎÊı2
-rem ²ÎÊı1:²éÕÒ³öµÄÊı×éÃû
-rem ²ÎÊı2:¿ÉÑ¡µÄ²Ù×÷Êı
+rem ##############################äºŒèœå•æ ¹æ®è¾“å…¥é€‰æ‹©è¦è¿›å…¥çš„æ“ä½œ##############################.
+rem ##############################äºŒèœå•æ ¹æ®è¾“å…¥é€‰æ‹©è¦è¿›å…¥çš„æ“ä½œ##############################.
+rem ##############################äºŒèœå•æ ¹æ®è¾“å…¥é€‰æ‹©è¦è¿›å…¥çš„æ“ä½œ##############################.
+rem äºŒèœå•æ ¹æ®è¾“å…¥é€‰æ‹©è¦è¿›å…¥çš„æ“ä½œ.
+rem è¯­æ³•:.
+rem ç¬¬ä¸€æ­¥:ä½¿ç”¨call::Function_ProcessExe å‚æ•°1,å‚æ•°2.
+rem å‚æ•°1:æŸ¥æ‰¾å‡ºçš„æ•°ç»„å.
+rem å‚æ•°2:å¯é€‰çš„æ“ä½œæ•°.
+
 :Function_ProcessExe
 
 call,set Local_Value1=%%%1%%
 set Local_Value2=%2
 
-rem µÚÒ»´ÎÊäÈë
+rem ç¬¬ä¸€æ¬¡è¾“å…¥.
+
 :Function_ProcessExe1
-echo ÇëÊäÈëÖ¸ÁîÊı,°´Enter¼üÈ·ÈÏ:
+echo è¯·è¾“å…¥æŒ‡ä»¤æ•°,æŒ‰Enteré”®ç¡®è®¤:
 
 goto :Function_ProcessExe3
 
-rem ·ÇµÚÒ»´ÎÊäÈëµÄÖ¸ÁîÊı
+rem éç¬¬ä¸€æ¬¡è¾“å…¥çš„æŒ‡ä»¤æ•°.
+
 :Function_ProcessExe2
-echo ÉÏÒ»´ÎÊäÈëÓĞÎó,ÇëÖØĞÂÊäÈëÖ¸ÁîÊı,°´Enter¼üÈ·ÈÏ:
+echo ä¸Šä¸€æ¬¡è¾“å…¥æœ‰è¯¯,è¯·é‡æ–°è¾“å…¥æŒ‡ä»¤æ•°,æŒ‰Enteré”®ç¡®è®¤:
 
 :Function_ProcessExe3
-rem ÏÈÖÃÎª¿ÕÊÇÎªÁË³õÊ¼»¯APP_Manager_Menu_Input_Num,²»È»µÚ¶ş´ÎÊäÈë¿ÕÖµ½«ÎªµÚÒ»´ÎÊäÈëµÄÖµ
+rem å…ˆç½®ä¸ºç©ºæ˜¯ä¸ºäº†åˆå§‹åŒ–APP_Manager_Menu_Input_Num,ä¸ç„¶ç¬¬äºŒæ¬¡è¾“å…¥ç©ºå€¼å°†ä¸ºç¬¬ä¸€æ¬¡è¾“å…¥çš„å€¼.
 set Local_InputValue=
 set /p Local_InputValue=
 
-rem ÊäÈë²»ÄÜÎª¿Õ.Îª¿ÕÔòĞèÒªÖØĞÂÊäÈë
+rem è¾“å…¥ä¸èƒ½ä¸ºç©º.ä¸ºç©ºåˆ™éœ€è¦é‡æ–°è¾“å…¥.
 if "%Local_InputValue%"=="" (
     goto:Function_ProcessExe2
 )
 
-rem ÊäÈëÖµÎª¶¨ÒåµÄ·µ»ØÖ÷²Ëµ¥°´¼üÊ±,·µ»Øµ½Ö÷²Ëµ¥
+rem è¾“å…¥å€¼ä¸ºå®šä¹‰çš„è¿”å›ä¸»èœå•æŒ‰é”®æ—¶,è¿”å›åˆ°ä¸»èœå•.
 if "%Local_InputValue%"=="%Global_ReturnKey%" (
     set %Local_Value2%=0
     goto:eof
 )
 
 
-rem ¿ªÊ¼»ñÈ¡ÊôĞÔ¶ÔÓ¦µÄË÷Òı
-rem ÉèÖÃÆğÊ¼Ë÷ÒıÎª1
+rem å¼€å§‹è·å–å±æ€§å¯¹åº”çš„ç´¢å¼•.
+rem è®¾ç½®èµ·å§‹ç´¢å¼•ä¸º1.
 set Global_ArrayIndex=1
 
 :Function_ProcessExe4
-rem ¼ì²é¶ÔÓ¦ÔªËØÓĞÃ»ÓĞ¶¨Òå
+rem æ£€æŸ¥å¯¹åº”å…ƒç´ æœ‰æ²¡æœ‰å®šä¹‰.
 if defined %Local_Value1%[%Global_ArrayIndex%].StartKey (
     goto :Function_ProcessExe5
 ) else (
     goto :Function_ProcessExe6
 )
 
-rem Ã»ÓĞ¶¨Òå±íÊ¾ÊäÈëÓĞÎÊÌâ,ĞèÒªÖØĞÂÊäÈë
-:Function_ProcessExe6
-goto:Function_ProcessExe2
+rem æ²¡æœ‰å®šä¹‰è¡¨ç¤ºè¾“å…¥æœ‰é—®é¢˜,éœ€è¦é‡æ–°è¾“å…¥.
 
-rem ÓĞ¶¨Òå,Ôò¼ÌĞøÅĞ¶Ï
+:Function_ProcessExe6
+goto :Function_ProcessExe2
+
+rem æœ‰å®šä¹‰,åˆ™ç»§ç»­åˆ¤æ–­.
+
 :Function_ProcessExe5
 
-rem ÁÙÊ±»ñÈ¡Êı×é¶ÔÓ¦Ë÷ÒıµÄÆô¶¯Ö¸ÁîºÍ¹Ø±ÕÖ¸Áî
+rem ä¸´æ—¶è·å–æ•°ç»„å¯¹åº”ç´¢å¼•çš„å¯åŠ¨æŒ‡ä»¤å’Œå…³é—­æŒ‡ä»¤.
 call, Set Local_StartKey=%%%Local_Value1%[%Global_ArrayIndex%].StartKey%%
 call, Set Local_CloseKey=%%%Local_Value1%[%Global_ArrayIndex%].CloseKey%%
 call, set Local_OpenDirectory=%%%Local_Value1%[%Global_ArrayIndex%].OpenDirectory%%
 
-rem ÅĞ¶ÏÊäÈëÖ¸ÁîÊÇ·ñÓë³ÌĞòÆô¶¯Ö¸ÁîÏàÍ¬
+rem åˆ¤æ–­è¾“å…¥æŒ‡ä»¤æ˜¯å¦ä¸ç¨‹åºå¯åŠ¨æŒ‡ä»¤ç›¸åŒ.
 if %Local_InputValue%==%Local_StartKey% (
     set %Local_Value2%=1
     goto :Function_ProcessExe11
@@ -717,15 +722,16 @@ if %Local_InputValue%==%Local_StartKey% (
     goto :Function_ProcessExe10
 )
 
-rem ²»µÈ,Ë÷ÒıÊı¼Ó1,½øĞĞÏÂÒ»ÂÖÅĞ¶Ï
+rem ä¸ç­‰,ç´¢å¼•æ•°åŠ 1,è¿›è¡Œä¸‹ä¸€è½®åˆ¤æ–­.
+
 :Function_ProcessExe10
-rem Ë÷Òı¼Ó1
+rem ç´¢å¼•åŠ 1.
 set /a Global_ArrayIndex+=1
 goto :Function_ProcessExe4
 
 
 :Function_ProcessExe11
-rem ½áÊø»ñÈ¡ÊôĞÔ¶ÔÓ¦µÄË÷Òı
+rem ç»“æŸè·å–å±æ€§å¯¹åº”çš„ç´¢å¼•.
 call, set Globle_ExeFileDirectory=%%%Local_Value1%[%Global_ArrayIndex%].FileDirectory%%
 call, set Globle_ExeFileName=%%%Local_Value1%[%Global_ArrayIndex%].FileName%%
 call, set Globle_KillTaskName=%%%Local_Value1%[%Global_ArrayIndex%].KillTaskName%%
@@ -734,13 +740,11 @@ echo Globle_ExeFileDirectory:%Globle_ExeFileDirectory%
 echo Globle_ExeFileName:%Globle_ExeFileName%
 echo Globle_KillTaskName:%Globle_KillTaskName%
 echo Local_TipName:%Local_TipName%
-goto:eof
+goto :eof
 
-rem #####################################################################################
-rem #####################################################################################
-rem #####################################################################################
-
-
+rem #####################################################################################.
+rem #####################################################################################.
+rem #####################################################################################.
 
 
 
@@ -763,28 +767,30 @@ rem ############################################################################
 
 
 
-rem ################################Éú³É½Å±¾¹¦ÄÜ¹ÜÀí²Ëµ¥ÌáÊ¾ÎÄ±¾ÄÚÈİStart################################
-rem ################################Éú³É½Å±¾¹¦ÄÜ¹ÜÀí²Ëµ¥ÌáÊ¾ÎÄ±¾ÄÚÈİStart################################
-rem ################################Éú³É½Å±¾¹¦ÄÜ¹ÜÀí²Ëµ¥ÌáÊ¾ÎÄ±¾ÄÚÈİStart################################
-rem Éú³ÉÌáÊ¾ÎÄ±¾²Ëµ¥ÄÚÈİ
-rem Óï·¨:
-rem µÚÒ»²½:Ê¹ÓÃcall:Function_CreateJSTipMessage ²ÎÊı1,²ÎÊı2
-rem ²ÎÊı2:°üº¬½Å±¾¹¦ÄÜĞÅÏ¢µÄÊı×é
-rem ²ÎÊı2:ÓÃÓÚÉèÖÃÊÇ·ñÒªÏÔÊ¾·µ»ØÖ÷²Ëµ¥ÌáÊ¾
+
+
+rem ################################ç”Ÿæˆè„šæœ¬åŠŸèƒ½ç®¡ç†èœå•æç¤ºæ–‡æœ¬å†…å®¹Start################################.
+rem ################################ç”Ÿæˆè„šæœ¬åŠŸèƒ½ç®¡ç†èœå•æç¤ºæ–‡æœ¬å†…å®¹Start################################.
+rem ################################ç”Ÿæˆè„šæœ¬åŠŸèƒ½ç®¡ç†èœå•æç¤ºæ–‡æœ¬å†…å®¹Start################################.
+rem ç”Ÿæˆæç¤ºæ–‡æœ¬èœå•å†…å®¹.
+rem è¯­æ³•:.
+rem ç¬¬ä¸€æ­¥:ä½¿ç”¨call:Function_CreateJSTipMessage å‚æ•°1,å‚æ•°2.
+rem å‚æ•°2:åŒ…å«è„šæœ¬åŠŸèƒ½ä¿¡æ¯çš„æ•°ç»„.
+rem å‚æ•°2:ç”¨äºè®¾ç½®æ˜¯å¦è¦æ˜¾ç¤ºè¿”å›ä¸»èœå•æç¤º.
 :Function_CreateJSTipMessage
 call, set Local_Value1=%%%1%%
 set Local_Value2=%2
 
-rem ÉèÖÃÆğÊ¼Ë÷ÒıÎª0
+rem è®¾ç½®èµ·å§‹ç´¢å¼•ä¸º0.
 set Global_ArrayIndex=1
 
 
 echo Tip:
 if "%Local_Value2%"=="1" (
-    echo %BlankKey%°´%Global_ReturnKey%¼ü·µ»ØÖ÷²Ëµ¥
+    echo %BlankKey%æŒ‰%Global_ReturnKey%é”®è¿”å›ä¸»èœå•
 )
 
-rem ¼ì²âÊÇ·ñÓĞ¶ÔÓ¦µÄÔªËØ
+rem æ£€æµ‹æ˜¯å¦æœ‰å¯¹åº”çš„å…ƒç´ .
 :Function_CreateJSTipMessage1
 if defined %Local_Value1%[%Global_ArrayIndex%].TipName (
     goto :Function_CreateJSTipMessage2
@@ -793,22 +799,22 @@ if defined %Local_Value1%[%Global_ArrayIndex%].TipName (
 )
 
 :Function_CreateJSTipMessage2
-call, echo %BlankKey%°´%%%Local_Value1%[%Global_ArrayIndex%].Key%%¼üÆô¶¯%%%Local_Value1%[%Global_ArrayIndex%].TipName%%
-rem Ë÷Òı¼Ó1
+call, echo %BlankKey%æŒ‰%%%Local_Value1%[%Global_ArrayIndex%].Key%%é”®å¯åŠ¨%%%Local_Value1%[%Global_ArrayIndex%].TipName%%
+rem ç´¢å¼•åŠ 1.
 set /a Global_ArrayIndex+=1
 goto :Function_CreateJSTipMessage1
 
 :Function_CreateJSTipMessage3
-echo Tip:ÊäÈë¶ÔÓ¦Ö¸Áî¼´¿ÉÖ´ĞĞ¶ÔÓ¦½Å±¾¹¦ÄÜ
+echo Tip:è¾“å…¥å¯¹åº”æŒ‡ä»¤å³å¯æ‰§è¡Œå¯¹åº”è„šæœ¬åŠŸèƒ½
 if "%bDebug%"=="1" (
-    echo ½Å±¾¹¦ÄÜ¹ÜÀí²Ëµ¥ÌáÊ¾ÎÄ±¾ÄÚÈİÉú³ÉÍê³É
+    echo è„šæœ¬åŠŸèƒ½ç®¡ç†èœå•æç¤ºæ–‡æœ¬å†…å®¹ç”Ÿæˆå®Œæˆ
     pause
 )
 
 goto :eof
-rem #####################################################################################
-rem #####################################################################################
-rem #####################################################################################
+rem #####################################################################################.
+rem #####################################################################################.
+rem #####################################################################################.
 
 
 
@@ -831,63 +837,63 @@ rem ############################################################################
 
 
 
-rem ##############################½Å±¾²Ëµ¥¸ù¾İÊäÈëÑ¡ÔñÒª½øÈëµÄ²Ù×÷##############################
-rem ##############################½Å±¾²Ëµ¥¸ù¾İÊäÈëÑ¡ÔñÒª½øÈëµÄ²Ù×÷##############################
-rem ##############################½Å±¾²Ëµ¥¸ù¾İÊäÈëÑ¡ÔñÒª½øÈëµÄ²Ù×÷##############################
-rem µÚÒ»²½:Ê¹ÓÃcall::Function_ProcessJS ²ÎÊı1,²ÎÊı2,²ÎÊı3
-rem ²ÎÊı1:²éÕÒ³öµÄÊı×éÃû
-rem ²ÎÊı2:¿ÉÑ¡µÄ²Ù×÷Êı
-rem ²ÎÊı3:Ö´ĞĞ½Å±¾ĞèÒªÌø×ªµÄ±êÇ©Ãû
+rem ##############################è„šæœ¬èœå•æ ¹æ®è¾“å…¥é€‰æ‹©è¦è¿›å…¥çš„æ“ä½œ##############################.
+rem ##############################è„šæœ¬èœå•æ ¹æ®è¾“å…¥é€‰æ‹©è¦è¿›å…¥çš„æ“ä½œ##############################.
+rem ##############################è„šæœ¬èœå•æ ¹æ®è¾“å…¥é€‰æ‹©è¦è¿›å…¥çš„æ“ä½œ##############################.
+rem ç¬¬ä¸€æ­¥:ä½¿ç”¨call::Function_ProcessJS å‚æ•°1,å‚æ•°2,å‚æ•°3.
+rem å‚æ•°1:æŸ¥æ‰¾å‡ºçš„æ•°ç»„å.
+rem å‚æ•°2:å¯é€‰çš„æ“ä½œæ•°.
+rem å‚æ•°3:æ‰§è¡Œè„šæœ¬éœ€è¦è·³è½¬çš„æ ‡ç­¾å.
 :Function_ProcessJS
 call,set Local_Value1=%%%1%%
 set Local_Value2=%2
 set Local_Value3=%3
 
-rem µÚÒ»´ÎÊäÈë
+rem ç¬¬ä¸€æ¬¡è¾“å…¥.
 :Function_ProcessJS1
-echo ÇëÊäÈëÖ¸ÁîÊı,°´Enter¼üÈ·ÈÏ:
+echo è¯·è¾“å…¥æŒ‡ä»¤æ•°,æŒ‰Enteré”®ç¡®è®¤:
 goto :Function_ProcessJS3
 
 
-rem ·ÇµÚÒ»´ÎÊäÈëµÄÖ¸ÁîÊı
+rem éç¬¬ä¸€æ¬¡è¾“å…¥çš„æŒ‡ä»¤æ•°.
 :Function_ProcessJS2
-echo ÉÏÒ»´ÎÊäÈëÓĞÎó,ÇëÖØĞÂÊäÈëÖ¸ÁîÊı,°´Enter¼üÈ·ÈÏ:
+echo ä¸Šä¸€æ¬¡è¾“å…¥æœ‰è¯¯,è¯·é‡æ–°è¾“å…¥æŒ‡ä»¤æ•°,æŒ‰Enteré”®ç¡®è®¤:
 
 :Function_ProcessJS3
-rem ÏÈÖÃÎª¿ÕÊÇÎªÁË³õÊ¼»¯JS_Manager_Menu_Input_Num,²»È»µÚ¶ş´ÎÊäÈë¿ÕÖµ½«ÎªµÚÒ»´ÎÊäÈëµÄÖµ
+rem å…ˆç½®ä¸ºç©ºæ˜¯ä¸ºäº†åˆå§‹åŒ–JS_Manager_Menu_Input_Num,ä¸ç„¶ç¬¬äºŒæ¬¡è¾“å…¥ç©ºå€¼å°†ä¸ºç¬¬ä¸€æ¬¡è¾“å…¥çš„å€¼.
 set Local_InputValue=
 set /p Local_InputValue=
 
 
-rem ÊäÈëÖµÎª¶¨ÒåµÄ·µ»ØÖ÷²Ëµ¥°´¼üÊ±£¬·µ»Øµ½Ö÷²Ëµ¥
+rem è¾“å…¥å€¼ä¸ºå®šä¹‰çš„è¿”å›ä¸»èœå•æŒ‰é”®æ—¶ï¼Œè¿”å›åˆ°ä¸»èœå•.
 if "%Local_InputValue%"=="%Global_ReturnKey%" (
     set %Local_Value2%=0
     goto :eof
 )
 
-rem ÊäÈë²»ÄÜÎª¿Õ
+rem è¾“å…¥ä¸èƒ½ä¸ºç©º.
 if "%Local_InputValue%"=="" (
     goto :Function_ProcessJS2
 )
 
 
-rem ¿ªÊ¼»ñÈ¡ÊôĞÔ¶ÔÓ¦µÄË÷Òı
-rem ÉèÖÃÆğÊ¼Ë÷ÒıÎª0
+rem å¼€å§‹è·å–å±æ€§å¯¹åº”çš„ç´¢å¼•.
+rem è®¾ç½®èµ·å§‹ç´¢å¼•ä¸º0.
 set Global_ArrayIndex=1
 
 :Function_ProcessJS4
 if defined %Local_Value1%[%Global_ArrayIndex%].Key (
-    rem ¶¨Òå
+    rem å®šä¹‰.
     goto :Function_ProcessJS5
 ) else (
-    rem Î´¶¨Òå
+    rem æœªå®šä¹‰.
     goto :Function_ProcessJS6
 )
 
-rem ÓĞ¶¨ÒåÔò½øĞĞ¼ì²éÅĞ¶Ï
+rem æœ‰å®šä¹‰åˆ™è¿›è¡Œæ£€æŸ¥åˆ¤æ–­.
 :Function_ProcessJS5
 
-rem »ñÈ¡Êı×éKeyÖµ
+rem è·å–æ•°ç»„Keyå€¼.
 call, Set Local_KeyValue=%%%Local_Value1%[%Global_ArrayIndex%].Key%%
 if %Local_KeyValue%==%Local_InputValue% (
     gotO :Function_ProcessJS7
@@ -896,30 +902,30 @@ if %Local_KeyValue%==%Local_InputValue% (
 )
 
 
-rem ÏàµÈ,ÔòÌøµ½»ñÈ¡Ë÷Òı½áÊø±êÇ©
+rem ç›¸ç­‰,åˆ™è·³åˆ°è·å–ç´¢å¼•ç»“æŸæ ‡ç­¾.
 :Function_ProcessJS7
 goto :Function_ProcessJS9
 
-rem ²»µÈ,Ôò½øĞĞÏÂÒ»´ÎÅĞ¶Ï
+rem ä¸ç­‰,åˆ™è¿›è¡Œä¸‹ä¸€æ¬¡åˆ¤æ–­.
 :Function_ProcessJS8
-rem Ë÷Òı¼Ó1
+rem ç´¢å¼•åŠ 1.
 set /a Global_ArrayIndex+=1
 goto :Function_ProcessJS4
 
 
-rem Ã»ÓĞ¶¨ÒåÔò·µ»Ø
+rem æ²¡æœ‰å®šä¹‰åˆ™è¿”å›.
 :Function_ProcessJS6
 goto :Function_ProcessJS2
 
 
 :Function_ProcessJS9
-rem ½áÊø»ñÈ¡ÊôĞÔ¶ÔÓ¦µÄË÷Òı
+rem ç»“æŸè·å–å±æ€§å¯¹åº”çš„ç´¢å¼•.
 call,set %Local_Value3%=%%%Local_Value1%[%Global_ArrayIndex%].Tag%%
 set %Local_Value2%=1
 goto :eof
-rem #####################################################################################
-rem #####################################################################################
-rem #####################################################################################
+rem #####################################################################################.
+rem #####################################################################################.
+rem #####################################################################################.
 
 
 
@@ -946,79 +952,79 @@ rem ############################################################################
 
 
 
-rem #######################Æô¶¯Ó¦ÓÃ³ÌĞòStart##########################
-rem Æô¶¯Ó¦ÓÃ³ÌĞò
-rem Óï·¨:
-rem µÚÒ»²½:Ê¹ÓÃcall:Function_LauncherAPP
+rem #######################å¯åŠ¨åº”ç”¨ç¨‹åºStart##########################.
+rem å¯åŠ¨åº”ç”¨ç¨‹åº.
+rem è¯­æ³•:.
+rem ç¬¬ä¸€æ­¥:ä½¿ç”¨call:Function_LauncherAPP.
 :Function_LauncherAPP
 if exist %Globle_ExeFileDirectory% (
-    rem ÎÄ¼ş¼ĞÂ·¾¶´æÔÚ
+    rem æ–‡ä»¶å¤¹è·¯å¾„å­˜åœ¨.
     goto :Function_LauncherAPP1
 )else (
-    rem ÎÄ¼ş¼ĞÂ·¾¶²»´æÔÚ
+    rem æ–‡ä»¶å¤¹è·¯å¾„ä¸å­˜åœ¨.
     goto :Function_LauncherAPP2
 )
 
-rem ÎÄ¼ş¼ĞÂ·¾¶´æÔÚ½«ÇĞµ½¶ÔÓ¦Ä¿Â¼
+rem æ–‡ä»¶å¤¹è·¯å¾„å­˜åœ¨å°†åˆ‡åˆ°å¯¹åº”ç›®å½•.
 :Function_LauncherAPP1
 cd /d %Globle_ExeFileDirectory%
 
 if exist %Globle_ExeFileName% (
-    rem ÎÄ¼ş´æÔÚ
+    rem æ–‡ä»¶å­˜åœ¨.
     goto :Function_LauncherAPP3
 )else (
-    rem ÎÄ¼ş²»´æÔÚ
+    rem æ–‡ä»¶ä¸å­˜åœ¨.
     goto :Function_LauncherAPP4
 )
 
-rem ÎÄ¼şÄ¿Â¼²»´æÔÚ,½áÊø¸Ã·½·¨
+rem æ–‡ä»¶ç›®å½•ä¸å­˜åœ¨,ç»“æŸè¯¥æ–¹æ³•.
 :Function_LauncherAPP2
 if "%bDebug%"=="1" (
-    echo ÎÄ¼şÄ¿Â¼²»´æÔÚ:%Globle_ExeFileDirectory%
+    echo æ–‡ä»¶ç›®å½•ä¸å­˜åœ¨:%Globle_ExeFileDirectory%
     pause
 )
 
-rem Çå¿Õ
+rem æ¸…ç©º.
 set Globle_ExeFileDirectory=""
 set Globle_ExeFileName=""
 set Globle_KillTaskName=""
 goto :eof
 
 
-rem ÎÄ¼ş´æÔÚ,Æô¶¯³ÌĞò
+rem æ–‡ä»¶å­˜åœ¨,å¯åŠ¨ç¨‹åº.
 :Function_LauncherAPP3
 if "%bDebug%"=="1" (
-    echo ¶ÔÓ¦Ä¿Â¼´æÔÚ¶ÔÓ¦ÎÄ¼ş,×¼±¸Æô¶¯:"Ä¿Â¼":%Globle_ExeFileDirectory%  "ÎÄ¼ş":%Globle_ExeFileName%
+    echo å¯¹åº”ç›®å½•å­˜åœ¨å¯¹åº”æ–‡ä»¶,å‡†å¤‡å¯åŠ¨:"ç›®å½•":%Globle_ExeFileDirectory%  "æ–‡ä»¶":%Globle_ExeFileName%
     pause
 )
-rem Æô¶¯³ÌĞò
+rem å¯åŠ¨ç¨‹åº.
 start %Globle_ExeFileName%
 
-rem Çå¿Õ
+rem æ¸…ç©º.
 set Globle_ExeFileDirectory=""
 set Globle_ExeFileName=""
 set Globle_KillTaskName=""
 
-rem ·µ»Øµ½Ç°Ò»¸öÄ¿Â¼
+rem è¿”å›åˆ°å‰ä¸€ä¸ªç›®å½•.
 popd
 goto :eof
 
-rem ÎÄ¼ş²»´æÔÚ,½áÊø¸Ã·½·¨
+rem æ–‡ä»¶ä¸å­˜åœ¨,ç»“æŸè¯¥æ–¹æ³•.
 :Function_LauncherAPP4
 if "%bDebug%"=="1" (
-    echo ¶ÔÓ¦Ä¿Â¼²»´æÔÚ¶ÔÓ¦ÎÄ¼ş:"Ä¿Â¼":%Globle_ExeFileDirectory%  "ÎÄ¼ş":%Globle_ExeFileName%
+    echo å¯¹åº”ç›®å½•ä¸å­˜åœ¨å¯¹åº”æ–‡ä»¶:"ç›®å½•":%Globle_ExeFileDirectory%  "æ–‡ä»¶":%Globle_ExeFileName%
     pause
 )
 
-rem Çå¿Õ
+rem æ¸…ç©º.
 set Globle_ExeFileDirectory=""
 set Globle_ExeFileName=""
 set Globle_KillTaskName=""
 
-rem ·µ»Øµ½Ç°Ò»¸öÄ¿Â¼
+rem è¿”å›åˆ°å‰ä¸€ä¸ªç›®å½•.
 popd
 goto :eof
-rem #######################Æô¶¯Ó¦ÓÃ³ÌĞòEnd##########################
+rem #######################å¯åŠ¨åº”ç”¨ç¨‹åºEnd##########################.
 
 
 
@@ -1038,25 +1044,25 @@ rem #######################Æô¶¯Ó¦ÓÃ³ÌĞòEnd##########################
 
 
 
-rem ###################¹Ø±ÕÓ¦ÓÃ³ÌĞòStart##############################
-rem ¹Ø±ÕÓ¦ÓÃ³ÌĞò
-rem Óï·¨:
-rem µÚÒ»²½:Ê¹ÓÃcall:Function_CloseAPP
+rem ###################å…³é—­åº”ç”¨ç¨‹åºStart##############################.
+rem å…³é—­åº”ç”¨ç¨‹åº.
+rem è¯­æ³•:.
+rem ç¬¬ä¸€æ­¥:ä½¿ç”¨call:Function_CloseAPP.
 :Function_CloseAPP
 
 if "%bDebug%"=="1" (
-    echo ×¼±¸¹Ø±ÕÓ¦ÓÃ³ÌĞò:%Globle_KillTaskName%
+    echo å‡†å¤‡å…³é—­åº”ç”¨ç¨‹åº:%Globle_KillTaskName%
     pause
 )
 
 taskkill /F /T /IM %Globle_KillTaskName%
 
-rem µ÷ÓÃtaskkillÃüÁîÖ®ºó½«"Globle_KillTaskName"±äÁ¿Çå¿Õ
+rem è°ƒç”¨taskkillå‘½ä»¤ä¹‹åå°†"Globle_KillTaskName"å˜é‡æ¸…ç©º.
 set Globle_ExeFileDirectory=""
 set Globle_ExeFileName=""
 set Globle_KillTaskName=""
 goto :eof
-rem ###################¹Ø±ÕÓ¦ÓÃ³ÌĞòEnd################################
+rem ###################å…³é—­åº”ç”¨ç¨‹åºEnd################################.
 
 
 
@@ -1065,28 +1071,28 @@ rem ###################¹Ø±ÕÓ¦ÓÃ³ÌĞòEnd################################
 
 
 
-rem ###################´ò¿ªÎÄ¼şÄ¿Â¼Start##############################
-rem ´ò¿ªÎÄ¼şÄ¿Â¼
-rem ÓÃ·¨:
-rem µÚÒ»²½:Ê¹ÓÃcall:Function_OpenDirectory
+rem ###################æ‰“å¼€æ–‡ä»¶ç›®å½•Start##############################.
+rem æ‰“å¼€æ–‡ä»¶ç›®å½•.
+rem ç”¨æ³•:.
+rem ç¬¬ä¸€æ­¥:ä½¿ç”¨call:Function_OpenDirectory.
 :Function_OpenDirectory
 
 if "%bDebug%"=="1" (
-    echo ´ò¿ªÎÄ¼şÄ¿Â¼·½·¨:ÎÄ¼şÄ¿Â¼Îª:%Globle_ExeFileDirectory%
+    echo æ‰“å¼€æ–‡ä»¶ç›®å½•æ–¹æ³•:æ–‡ä»¶ç›®å½•ä¸º:%Globle_ExeFileDirectory%
     pause
 )
 
 if exist %Globle_ExeFileDirectory% (
-    rem ´æÔÚ¶ÔÓ¦Ä¿Â¼
+    rem å­˜åœ¨å¯¹åº”ç›®å½•.
     explorer %Globle_ExeFileDirectory%
 )
 
-rem µ÷ÓÃexplorerÖ®ºó,Çå¿Õ
+rem è°ƒç”¨explorerä¹‹å,æ¸…ç©º.
 set Globle_ExeFileDirectory=""
 set Globle_ExeFileName=""
 set Globle_KillTaskName=""
 goto :eof
-rem ###################´ò¿ªÎÄ¼şÄ¿Â¼End################################
+rem ###################æ‰“å¼€æ–‡ä»¶ç›®å½•End################################.
 
 
 
@@ -1097,12 +1103,12 @@ rem ###################´ò¿ªÎÄ¼şÄ¿Â¼End################################
 
 
 
-rem ##############################Í¼Ïñ×¢ÊÍStart#################################
-rem ##############################Í¼Ïñ×¢ÊÍStart#################################
-rem ##############################Í¼Ïñ×¢ÊÍStart#################################
-rem ´òÓ¡Í¼Ïñ×¢ÊÍ
-rem Óï·¨:
-rem µÚÒ»²½:Ê¹ÓÃcall:Function_CreateImageTip
+rem ##############################å›¾åƒæ³¨é‡ŠStart#################################.
+rem ##############################å›¾åƒæ³¨é‡ŠStart#################################.
+rem ##############################å›¾åƒæ³¨é‡ŠStart#################################.
+rem æ‰“å°å›¾åƒæ³¨é‡Š.
+rem è¯­æ³•:.
+rem ç¬¬ä¸€æ­¥:ä½¿ç”¨call:Function_CreateImageTip.
 
 :Function_CreateImageTip
 
@@ -1133,7 +1139,7 @@ echo "                                                                          
 echo %Mark_Tag%
 
 goto :eof
-rem ###################################Í¼Ïñ×¢ÊÍEnd#################################################
+rem ###################################å›¾åƒæ³¨é‡ŠEnd#################################################.
 
 
 
@@ -1163,14 +1169,14 @@ rem ###################################Í¼Ïñ×¢ÊÍEnd##############################
 
 
 
-rem ###################################²éÕÒ×Ö·û´®ÊÇ·ñ°üº¬Start######################################
-rem ²éÕÒ×Ö·û´®ÊÇ·ñ°üº¬Ö¸¶¨×Ö·û´®
-rem Óï·¨:
-rem µÚÒ»²½:Ê¹ÓÃcall:Contb_Is_Contain_Sub_String_MainainSubString_Main ²ÎÊı1,²ÎÊı2,²ÎÊı3
-rem ²ÎÊı1:Òª²éÕÒµÄ×Ö·û´®
-rem ²ÎÊı2:Òª²éÕÒµÄ×Ó×Ö·û´®
-rem ²ÎÊı3:²éÕÒÍêÒªÌø×ªµÄ±êÇ©
-rem ½«·µ»ØtrueºÍfalseµÄ×Ö·û,×¢ÒâÊ¹ÓÃ%1À´½ÓÊÕ
+rem ###################################æŸ¥æ‰¾å­—ç¬¦ä¸²æ˜¯å¦åŒ…å«Start######################################.
+rem æŸ¥æ‰¾å­—ç¬¦ä¸²æ˜¯å¦åŒ…å«æŒ‡å®šå­—ç¬¦ä¸².
+rem è¯­æ³•:.
+rem ç¬¬ä¸€æ­¥:ä½¿ç”¨call:Contb_Is_Contain_Sub_String_MainainSubString_Main å‚æ•°1,å‚æ•°2,å‚æ•°3.
+rem å‚æ•°1:è¦æŸ¥æ‰¾çš„å­—ç¬¦ä¸².
+rem å‚æ•°2:è¦æŸ¥æ‰¾çš„å­å­—ç¬¦ä¸².
+rem å‚æ•°3:æŸ¥æ‰¾å®Œè¦è·³è½¬çš„æ ‡ç­¾.
+rem å°†è¿”å›trueå’Œfalseçš„å­—ç¬¦,æ³¨æ„ä½¿ç”¨%1æ¥æ¥æ”¶.
 :b_Is_Contain_Sub_String_Main
 set MainStr=%1
 set SubStr=%2
@@ -1178,7 +1184,7 @@ set WillGotoTag=%3
 
 echo %MainStr%| findstr /c:%SubStr% && set FindResult=true ||set FindResult=false
 call :%WillGotoTag% %FindResult%
-rem ###################################²éÕÒ×Ö·û´®ÊÇ·ñ°üº¬End#########################################
+rem ###################################æŸ¥æ‰¾å­—ç¬¦ä¸²æ˜¯å¦åŒ…å«End#########################################.
 
 
 
@@ -1205,244 +1211,244 @@ rem ###################################²éÕÒ×Ö·û´®ÊÇ·ñ°üº¬End####################
 
 
 
-rem ######################################ÎÄ¼şÖØÃüÃûStart#####################################
-rem ######################################ÎÄ¼şÖØÃüÃûStart#####################################
-rem ######################################ÎÄ¼şÖØÃüÃûStart#####################################
-rem ######################################ÎÄ¼şÖØÃüÃûStart#####################################
+rem ######################################æ–‡ä»¶é‡å‘½åStart#####################################.
+rem ######################################æ–‡ä»¶é‡å‘½åStart#####################################.
+rem ######################################æ–‡ä»¶é‡å‘½åStart#####################################.
+rem ######################################æ–‡ä»¶é‡å‘½åStart#####################################.
 :Function_RenameFile
 
-rem µÚÒ»´ÎÊäÈëÎÄ¼ş¼ĞÂ·¾¶
+rem ç¬¬ä¸€æ¬¡è¾“å…¥æ–‡ä»¶å¤¹è·¯å¾„.
 :Batch_Files_Rename_First_Input_Directory
-echo ÇëÊäÈëÎÄ¼ş¼ĞÂ·¾¶:
+echo è¯·è¾“å…¥æ–‡ä»¶å¤¹è·¯å¾„:
 goto :Batch_Files_Rename_Input_File_Dirctory_Complete
 
-rem µÚ¶ş´ÎÊäÈëÎÄ¼ş¼ĞÂ·¾¶
+rem ç¬¬äºŒæ¬¡è¾“å…¥æ–‡ä»¶å¤¹è·¯å¾„.
 :Batch_Files_Rename_Second_Input_Directory
-echo ÎÄ¼ş¼ĞÂ·¾¶´íÎó,ÇëÖØĞÂÊäÈëÎÄ¼ş¼ĞÂ·¾¶:
+echo æ–‡ä»¶å¤¹è·¯å¾„é”™è¯¯,è¯·é‡æ–°è¾“å…¥æ–‡ä»¶å¤¹è·¯å¾„:
 
 :Batch_Files_Rename_Input_File_Dirctory_Complete
-rem ÏÈÖÃÎª¿ÕÊÇÎªÁË³õÊ¼»¯FolderDirectory,²»È»µÚ¶ş´ÎÊäÈë¿ÕÖµ½«ÎªµÚÒ»´ÎÊäÈëµÄÖµ
+rem å…ˆç½®ä¸ºç©ºæ˜¯ä¸ºäº†åˆå§‹åŒ–FolderDirectory,ä¸ç„¶ç¬¬äºŒæ¬¡è¾“å…¥ç©ºå€¼å°†ä¸ºç¬¬ä¸€æ¬¡è¾“å…¥çš„å€¼.
 set Batch_Files_Rename_Folder_Directory=
 set /p Batch_Files_Rename_Folder_Directory=
 
-rem ¼ì²âÎÄ¼ş¼ĞÊÇ·ñÎªÓĞĞ§Â·¾¶
+rem æ£€æµ‹æ–‡ä»¶å¤¹æ˜¯å¦ä¸ºæœ‰æ•ˆè·¯å¾„.
 if exist "%Batch_Files_Rename_Folder_Directory%" (
-    echo ÎÄ¼ş¼ĞÂ·¾¶´æÔÚ
-    rem echo %FolderDirectory%
+    echo æ–‡ä»¶å¤¹è·¯å¾„å­˜åœ¨
+    rem echo %FolderDirectory%.
 ) else (
-    rem Èç¹ûÎÄ¼şÂ·¾¶²»´æÔÚ,ÔòĞèÒªµÚ¶ş´ÎÊäÈëÎÄ¼şÂ·¾¶
-    echo ÎÄ¼ş¼ĞÂ·¾¶²»´æÔÚ
+    rem å¦‚æœæ–‡ä»¶è·¯å¾„ä¸å­˜åœ¨,åˆ™éœ€è¦ç¬¬äºŒæ¬¡è¾“å…¥æ–‡ä»¶è·¯å¾„.
+    echo æ–‡ä»¶å¤¹è·¯å¾„ä¸å­˜åœ¨
     goto :Batch_Files_Rename_Second_Input_Directory
 ) 
 
-rem °Ñµ±Ç°Â·¾¶ÇĞ»»µ½ÊäÈëµÄÎÄ¼ş¼ĞÂ·¾¶
+rem æŠŠå½“å‰è·¯å¾„åˆ‡æ¢åˆ°è¾“å…¥çš„æ–‡ä»¶å¤¹è·¯å¾„.
 cd /d %Batch_Files_Rename_Folder_Directory%
 
 
-rem ¿ªÊ¼ÎÄ¼şÃûÇ°×ºÉèÖÃ
-echo ÇëÊäÈëĞÂÎÄ¼şÃûÇ°×º:
+rem å¼€å§‹æ–‡ä»¶åå‰ç¼€è®¾ç½®.
+echo è¯·è¾“å…¥æ–°æ–‡ä»¶åå‰ç¼€:
 set Batch_Files_Rename_prefix=
 set /p Batch_Files_Rename_prefix=
 
-rem ¿ªÊ¼ÎÄ¼şÃûºó×ºÉèÖÃ
-echo ÇëÊäÈëºó×ºÃû,½öÖ§³ÖÊı×Ö,Ä¬ÈÏÎª1,ºóĞøÎÄ¼şÃû½«Îª(Ç°×ºÃû+ºó×ºÃû+ÎÄ¼ş¸ñÊ½ºó×º)
+rem å¼€å§‹æ–‡ä»¶ååç¼€è®¾ç½®.
+echo è¯·è¾“å…¥åç¼€å,ä»…æ”¯æŒæ•°å­—,é»˜è®¤ä¸º1,åç»­æ–‡ä»¶åå°†ä¸º(å‰ç¼€å+åç¼€å+æ–‡ä»¶æ ¼å¼åç¼€)
 :Batch_Files_Rename_Suffix_Re_Input
 set TemSuffix=
 set /p TemSuffix=
 
-rem echo ÊäÈë:%TemSuffix%
+rem echo è¾“å…¥:%TemSuffix%.
 
 if "%TemSuffix%"=="" (
-    echo ÊäÈëºó×ºÃûÎª¿Õ,½«Ä¬ÈÏÎª1
+    echo è¾“å…¥åç¼€åä¸ºç©º,å°†é»˜è®¤ä¸º1
     set Batch_Files_Rename_Suffix=1
 ) else (
-    rem echo ºó×ºÃû·Ç¿Õ,½øĞĞ¼ì²â
+    rem echo åç¼€åéç©º,è¿›è¡Œæ£€æµ‹.
     set Batch_Files_Rename_Suffix=%TemSuffix%
 )
 
-rem #######################¿ªÊ¼¼ì²éºó×ºÃûÊÇ·ñÈ«ÎªÊı×Ö##################
-rem Ä¬ÈÏ¿ªÊ¼µÄ¼ì²éÊıÄ¿Îª0
-rem ÉèÖÃÁÙÊ±µÄºó×º±äÁ¿£¬¸Ã±äÁ¿»á½øĞĞ·Ö¸î×Ö·û
+rem #######################å¼€å§‹æ£€æŸ¥åç¼€åæ˜¯å¦å…¨ä¸ºæ•°å­—##################.
+rem é»˜è®¤å¼€å§‹çš„æ£€æŸ¥æ•°ç›®ä¸º0.
+rem è®¾ç½®ä¸´æ—¶çš„åç¼€å˜é‡ï¼Œè¯¥å˜é‡ä¼šè¿›è¡Œåˆ†å‰²å­—ç¬¦.
 set Batch_Files_Rename_Will_Check_Content=%Batch_Files_Rename_Suffix%
 
-rem ÏÈ¼ÙÉèÈ«ÎªÊı×Ö
+rem å…ˆå‡è®¾å…¨ä¸ºæ•°å­—.
 set Batch_Files_Rename_Check_Result_Is_Num=true
 
-rem ¼ì²éµ±Ç°Ê××Ö·û
+rem æ£€æŸ¥å½“å‰é¦–å­—ç¬¦.
 :Batch_Files_Rename_Check_Start
 
 
-rem µ±Ç°Òª¼ì²éµÄÄÚÈİÊÇ·ñÎª¿Õ
+rem å½“å‰è¦æ£€æŸ¥çš„å†…å®¹æ˜¯å¦ä¸ºç©º.
 if "%Batch_Files_Rename_Will_Check_Content%"=="" (
-    rem ×Ö·ûÎª¿Õ,±íÊ¾ËùÓĞ×Ö·ûÒÑ¾­¼ì²éÍê±Ï
+    rem å­—ç¬¦ä¸ºç©º,è¡¨ç¤ºæ‰€æœ‰å­—ç¬¦å·²ç»æ£€æŸ¥å®Œæ¯•.
     goto :Batch_Files_Rename_Check_End
 )
 
 set Will_Check_First_Char=%Batch_Files_Rename_Will_Check_Content:~0,1%
 set Batch_Files_Rename_Will_Check_Content=%Batch_Files_Rename_Will_Check_Content:~1%
 
-rem Batch_Files_Rename_Will_Check_ContentÎª:%Batch_Files_Rename_Will_Check_Content%
-rem Will_Check_First_CharÎª:%Will_Check_First_Char%
+rem Batch_Files_Rename_Will_Check_Contentä¸º:%Batch_Files_Rename_Will_Check_Content%.
+rem Will_Check_First_Charä¸º:%Will_Check_First_Char%.
 
-rem ¿ªÊ¼½øĞĞ×Ö·û¼ì²â
-rem ÊÇ·ñÎª0
+rem å¼€å§‹è¿›è¡Œå­—ç¬¦æ£€æµ‹.
+rem æ˜¯å¦ä¸º0.
 :Batch_Files_Rename_check_0
 
 if "%Will_Check_First_Char%"=="0" (
-    rem ×Ö·û%Will_Check_First_Char%ÎªÊı×Ö0,¼ì²éÏÂÒ»¸ö×Ö·û
+    rem å­—ç¬¦%Will_Check_First_Char%ä¸ºæ•°å­—0,æ£€æŸ¥ä¸‹ä¸€ä¸ªå­—ç¬¦.
     goto :Batch_Files_Rename_Check_Start
 ) else (
-    rem echo ×Ö·û%Will_Check_First_Char%²»ÎªÊı×Ö0,½øĞĞÏÂÒ»¸öÅĞ¶Ï
+    rem echo å­—ç¬¦%Will_Check_First_Char%ä¸ä¸ºæ•°å­—0,è¿›è¡Œä¸‹ä¸€ä¸ªåˆ¤æ–­.
     goto :Batch_Files_Rename_check_1
 )
 
-rem ÊÇ·ñÎª1
+rem æ˜¯å¦ä¸º1.
 :Batch_Files_Rename_check_1
 
 if "%Will_Check_First_Char%"=="1" (
-    rem ×Ö·û%Will_Check_First_Char%ÎªÊı×Ö1,¼ì²éÏÂÒ»¸ö×Ö·û
+    rem å­—ç¬¦%Will_Check_First_Char%ä¸ºæ•°å­—1,æ£€æŸ¥ä¸‹ä¸€ä¸ªå­—ç¬¦.
     goto :Batch_Files_Rename_Check_Start
 ) else (
-    rem echo ×Ö·û%Will_Check_First_Char%²»ÎªÊı×Ö1,½øĞĞÏÂÒ»¸öÅĞ¶Ï
+    rem echo å­—ç¬¦%Will_Check_First_Char%ä¸ä¸ºæ•°å­—1,è¿›è¡Œä¸‹ä¸€ä¸ªåˆ¤æ–­.
     goto :Batch_Files_Rename_check_2
 )
 
-rem ÊÇ·ñÎª2
+rem æ˜¯å¦ä¸º2.
 :Batch_Files_Rename_check_2
 
 if "%Will_Check_First_Char%"=="2" (
-    rem echo ×Ö·û%Will_Check_First_Char%ÎªÊı×Ö2,¼ì²éÏÂÒ»¸ö×Ö·û
+    rem echo å­—ç¬¦%Will_Check_First_Char%ä¸ºæ•°å­—2,æ£€æŸ¥ä¸‹ä¸€ä¸ªå­—ç¬¦.
     goto :Batch_Files_Rename_Check_Start
 ) else (
-    rem echo ×Ö·û%Will_Check_First_Char%²»ÎªÊı×Ö2,½øĞĞÏÂÒ»¸öÅĞ¶Ï
+    rem echo å­—ç¬¦%Will_Check_First_Char%ä¸ä¸ºæ•°å­—2,è¿›è¡Œä¸‹ä¸€ä¸ªåˆ¤æ–­.
     goto :Batch_Files_Rename_check_3   
 )
 
-rem ÊÇ·ñÎª3
+rem æ˜¯å¦ä¸º3.
 :Batch_Files_Rename_check_3
 
 if "%Will_Check_First_Char%"=="3" (
-    rem echo ×Ö·û%Will_Check_First_Char%ÎªÊı×Ö3,¼ì²éÏÂÒ»¸ö×Ö·û
+    rem echo å­—ç¬¦%Will_Check_First_Char%ä¸ºæ•°å­—3,æ£€æŸ¥ä¸‹ä¸€ä¸ªå­—ç¬¦.
     goto :Batch_Files_Rename_Check_Start
 ) else (
-    rem echo ×Ö·û%Will_Check_First_Char%²»ÎªÊı×Ö3,½øĞĞÏÂÒ»¸öÅĞ¶Ï
+    rem echo å­—ç¬¦%Will_Check_First_Char%ä¸ä¸ºæ•°å­—3,è¿›è¡Œä¸‹ä¸€ä¸ªåˆ¤æ–­.
     goto :Batch_Files_Rename_check_4
 )
 
-rem ÊÇ·ñÎª4
+rem æ˜¯å¦ä¸º4.
 :Batch_Files_Rename_check_4
 
 if "%Will_Check_First_Char%"=="4" (
-    rem echo ×Ö·û%Will_Check_First_Char%ÎªÊı×Ö4,¼ì²éÏÂÒ»¸ö×Ö·û
+    rem echo å­—ç¬¦%Will_Check_First_Char%ä¸ºæ•°å­—4,æ£€æŸ¥ä¸‹ä¸€ä¸ªå­—ç¬¦.
     goto :Batch_Files_Rename_Check_Start
 ) else (
-    rem echo ×Ö·û%Will_Check_First_Char%²»ÎªÊı×Ö4,½øĞĞÏÂÒ»¸öÅĞ¶Ï
+    rem echo å­—ç¬¦%Will_Check_First_Char%ä¸ä¸ºæ•°å­—4,è¿›è¡Œä¸‹ä¸€ä¸ªåˆ¤æ–­.
     goto :Batch_Files_Rename_check_5
 )
 
-rem ÊÇ·ñÎª5
+rem æ˜¯å¦ä¸º5.
 :Batch_Files_Rename_check_5
 
 if "%Will_Check_First_Char%"=="5" (
-    rem echo ×Ö·û%Will_Check_First_Char%ÎªÊı×Ö5,¼ì²éÏÂÒ»¸ö×Ö·û
+    rem echo å­—ç¬¦%Will_Check_First_Char%ä¸ºæ•°å­—5,æ£€æŸ¥ä¸‹ä¸€ä¸ªå­—ç¬¦.
     goto :Batch_Files_Rename_Check_Start
 ) else (
-    rem echo ×Ö·û%Will_Check_First_Char%²»ÎªÊı×Ö5,½øĞĞÏÂÒ»¸öÅĞ¶Ï
+    rem echo å­—ç¬¦%Will_Check_First_Char%ä¸ä¸ºæ•°å­—5,è¿›è¡Œä¸‹ä¸€ä¸ªåˆ¤æ–­.
     goto :Batch_Files_Rename_check_6
 )
 
-rem ÊÇ·ñÎª6
+rem æ˜¯å¦ä¸º6.
 :Batch_Files_Rename_check_6
 
 if "%FirstChar%"=="6" (
-    rem echo ×Ö·û%FirstChar%ÎªÊı×Ö6,¼ì²éÏÂÒ»¸ö×Ö·û
+    rem echo å­—ç¬¦%FirstChar%ä¸ºæ•°å­—6,æ£€æŸ¥ä¸‹ä¸€ä¸ªå­—ç¬¦.
     goto :Batch_Files_Rename_Check_Start
 ) else (
-    rem echo ×Ö·û%FirstChar%²»ÎªÊı×Ö6,½øĞĞÏÂÒ»¸öÅĞ¶Ï
+    rem echo å­—ç¬¦%FirstChar%ä¸ä¸ºæ•°å­—6,è¿›è¡Œä¸‹ä¸€ä¸ªåˆ¤æ–­.
     goto :Batch_Files_Rename_check_7
 )
 
-rem ÊÇ·ñÎª7
+rem æ˜¯å¦ä¸º7.
 :Batch_Files_Rename_check_7
 
 if "%Will_Check_First_Char%"=="7" (
-    rem echo ×Ö·û%Will_Check_First_Char%ÎªÊı×Ö7,¼ì²éÏÂÒ»¸ö×Ö·û
+    rem echo å­—ç¬¦%Will_Check_First_Char%ä¸ºæ•°å­—7,æ£€æŸ¥ä¸‹ä¸€ä¸ªå­—ç¬¦.
     goto :Batch_Files_Rename_Check_Start
 ) else (
-    rem echo ×Ö·û%Will_Check_First_Char%²»ÎªÊı×Ö7,½øĞĞÏÂÒ»¸öÅĞ¶Ï
+    rem echo å­—ç¬¦%Will_Check_First_Char%ä¸ä¸ºæ•°å­—7,è¿›è¡Œä¸‹ä¸€ä¸ªåˆ¤æ–­.
     goto :Batch_Files_Rename_check_8
 )
 
-rem ÊÇ·ñÎª8
+rem æ˜¯å¦ä¸º8.
 :Batch_Files_Rename_check_8
 
 if "%Will_Check_First_Char%"=="8" (
-    rem echo ×Ö·û%Will_Check_First_Char%ÎªÊı×Ö8,¼ì²éÏÂÒ»¸ö×Ö·û
+    rem echo å­—ç¬¦%Will_Check_First_Char%ä¸ºæ•°å­—8,æ£€æŸ¥ä¸‹ä¸€ä¸ªå­—ç¬¦.
     goto :Batch_Files_Rename_Check_Start
 ) else (
-    rem echo ×Ö·û%Will_Check_First_Char%²»ÎªÊı×Ö8,½øĞĞÏÂÒ»¸öÅĞ¶Ï
+    rem echo å­—ç¬¦%Will_Check_First_Char%ä¸ä¸ºæ•°å­—8,è¿›è¡Œä¸‹ä¸€ä¸ªåˆ¤æ–­.
     goto :Batch_Files_Rename_check_9
 )
 
-rem ÊÇ·ñÎª9
+rem æ˜¯å¦ä¸º9.
 :Batch_Files_Rename_check_9
 
 if "%Will_Check_First_Char%"=="9" (
-    rem echo ×Ö·û%Will_Check_First_Char%ÎªÊı×Ö9,¼ì²éÏÂÒ»¸ö×Ö·û
+    rem echo å­—ç¬¦%Will_Check_First_Char%ä¸ºæ•°å­—9,æ£€æŸ¥ä¸‹ä¸€ä¸ªå­—ç¬¦.
     goto :Batch_Files_Rename_Check_Start
 ) else (
-    rem echo ×Ö·û%Will_Check_First_Char%²»ÎªÊı×Ö9,½øĞĞÏÂÒ»¸öÅĞ¶Ï
+    rem echo å­—ç¬¦%Will_Check_First_Char%ä¸ä¸ºæ•°å­—9,è¿›è¡Œä¸‹ä¸€ä¸ªåˆ¤æ–­.
     set Batch_Files_Rename_Check_Result_Is_Num=false
     goto :Batch_Files_Rename_Check_End
 )
 
 
 :Batch_Files_Rename_Check_End
-rem Batch_Files_Rename_Check_Result_Is_NumµÄÖµÎª%Batch_Files_Rename_Check_Result_Is_Num%
+rem Batch_Files_Rename_Check_Result_Is_Numçš„å€¼ä¸º%Batch_Files_Rename_Check_Result_Is_Num%.
 
 if "%Batch_Files_Rename_Check_Result_Is_Num%"=="true" (
     goto :Batch_Files_Rename_Set_File_Format
 ) else if "%Batch_Files_Rename_Check_Result_Is_Num%"=="false" (
-    echo ÊäÈëº¬ÓĞ·ÇÊı×Ö×Ö·û,ÇëÖØĞÂÊäÈë:
+    echo è¾“å…¥å«æœ‰éæ•°å­—å­—ç¬¦,è¯·é‡æ–°è¾“å…¥:
     goto :Batch_Files_Rename_Suffix_Re_Input
 )
 
-rem #######################½áÊø¼ì²éºó×ºÃûÊÇ·ñÈ«ÎªÊı×Ö##################
+rem #######################ç»“æŸæ£€æŸ¥åç¼€åæ˜¯å¦å…¨ä¸ºæ•°å­—##################.
 
 :Batch_Files_Rename_Set_File_Format
-rem ÉèÖÃÎÄ¼şµÄºó×º¸ñÊ½
-rem echo ÉèÖÃÎÄ¼şµÄºó×º¸ñÊ½,ÀıÈç.png:
-rem set Batch_Files_Rename_File_Suffix=
-rem set /p Batch_Files_Rename_File_Suffix=
+rem è®¾ç½®æ–‡ä»¶çš„åç¼€æ ¼å¼.
+rem echo è®¾ç½®æ–‡ä»¶çš„åç¼€æ ¼å¼,ä¾‹å¦‚.png:.
+rem set Batch_Files_Rename_File_Suffix=.
+rem set /p Batch_Files_Rename_File_Suffix=.
 
 
 
 
 for %%n in (*.*) do (
     call :Batch_Files_Rename_For_Exe %%n
-rem ren "%%n" "!Batch_Files_Rename_prefix!!Batch_Files_Rename_Suffix!!Batch_Files_Rename_File_Suffix!"
+rem ren "%%n" "!Batch_Files_Rename_prefix!!Batch_Files_Rename_Suffix!!Batch_Files_Rename_File_Suffix!".
 set /a Batch_Files_Rename_Suffix+=1
 )
 goto :eof
 
-rem Ê¹ÓÃ±êÇ©,ÒòÎªÔÚforÑ­»·ÖĞÎ´ÄÜ»ñÈ¡±äÁ¿µÄÖµ¸øÁíÒ»¸ö±äÁ¿¸³Öµ
+rem ä½¿ç”¨æ ‡ç­¾,å› ä¸ºåœ¨forå¾ªç¯ä¸­æœªèƒ½è·å–å˜é‡çš„å€¼ç»™å¦ä¸€ä¸ªå˜é‡èµ‹å€¼.
 :Batch_Files_Rename_For_Exe
 
-rem #############################¿ªÊ¼»ñÈ¡ÎÄ¼şºó×ºÃû#############################
+rem #############################å¼€å§‹è·å–æ–‡ä»¶åç¼€å#############################.
 set Current_File_Name=%1
 set Tem_File_Name=%1
-rem echo Current_File_Name:%Current_File_Name%
-rem echo Tem_File_Name:%Tem_File_Name%
+rem echo Current_File_Name:%Current_File_Name%.
+rem echo Tem_File_Name:%Tem_File_Name%.
 
-rem ÉèÖÃ¿ªÊ¼²éÕÒÎÄ¼şºó×ºµÄË÷ÒıÎª1
+rem è®¾ç½®å¼€å§‹æŸ¥æ‰¾æ–‡ä»¶åç¼€çš„ç´¢å¼•ä¸º1.
 set Find_File_Suffiex_Index=1
 
-rem ¼ÌĞø»ñÈ¡ÎÄ¼şË÷Òı
+rem ç»§ç»­è·å–æ–‡ä»¶ç´¢å¼•.
 :Batch_Files_Rename_For_Get_File_Suffiex_Name_Go_On
 
-rem ¼ì²é×îºóÒ»¸ö×Ö·ûÊÇ·ñÎª"."
+rem æ£€æŸ¥æœ€åä¸€ä¸ªå­—ç¬¦æ˜¯å¦ä¸º".".
 set Current_Last_Char=%Tem_File_Name:~-1%
-rem echo µ±Ç°×îºóÒ»¸ö×Ö·ûÎª:%Current_Last_Char%
+rem echo å½“å‰æœ€åä¸€ä¸ªå­—ç¬¦ä¸º:%Current_Last_Char%.
 
 
 if "%Current_Last_Char%"=="." (
@@ -1453,60 +1459,50 @@ if "%Current_Last_Char%"=="." (
     goto :Batch_Files_Rename_For_Get_File_Suffiex_Name_Last_Char_Not_Is_Dot
 )
 
-rem ¼ì²âµ±Ç°×îºóÒ»¸ö×Ö·ûÎª"."
+rem æ£€æµ‹å½“å‰æœ€åä¸€ä¸ªå­—ç¬¦ä¸º".".
 :Batch_Files_Rename_For_Get_File_Suffiex_Name_Last_Char_Is_Dot
-rem echo ÕÒµ½"."×Ö·û,NumÎª:%FileSuffiexIndex%
+rem echo æ‰¾åˆ°"."å­—ç¬¦,Numä¸º:%FileSuffiexIndex%.
 call, set Fiel_Suffiex=%%Current_File_Name:~-%Find_File_Suffiex_Index%%%
 goto :Batch_Files_Rename_For_File_Is_Have_Suffix
 
 
 
-rem ¼ì²âµ±Ç°×îºóÒ»¸ö×Ö·û²»ÊÇ"."
+rem æ£€æµ‹å½“å‰æœ€åä¸€ä¸ªå­—ç¬¦ä¸æ˜¯".".
 :Batch_Files_Rename_For_Get_File_Suffiex_Name_Last_Char_Not_Is_Dot
 set Tem_File_Name=%Tem_File_Name:~0,-1%
 
-rem µ±È¥µô×îºóÒ»¸ö×Ö·ûÊ±Îª¿ÕÊ±
+rem å½“å»æ‰æœ€åä¸€ä¸ªå­—ç¬¦æ—¶ä¸ºç©ºæ—¶.
 if "%Tem_File_Name%"=="" (
     goto :Batch_Files_Rename_For_File_Is_Not_Suffix
 )
 
-rem echo TemValue¼õ1µÄÖµÎª:%TemFileName%
+rem echo TemValueå‡1çš„å€¼ä¸º:%TemFileName%.
 set /a Find_File_Suffiex_Index+=1
 goto :Batch_Files_Rename_For_Get_File_Suffiex_Name_Go_On
 
-rem ¼ì²âµ±Ç°×îºóÒ»¸ö×Ö·ûÎª¿Õ
+rem æ£€æµ‹å½“å‰æœ€åä¸€ä¸ªå­—ç¬¦ä¸ºç©º.
 :Batch_Files_Rename_For_Get_File_Suffiex_Name_Last_Char_Is_Empty
-rem Î´¼ì²â³öºó×º,°´ÎŞºó×ºÃûÎÄ¼ş´¦Àí
+rem æœªæ£€æµ‹å‡ºåç¼€,æŒ‰æ— åç¼€åæ–‡ä»¶å¤„ç†.
 gotO :Batch_Files_Rename_For_File_Is_Not_Suffix
 
-rem #############################½áÊø»ñÈ¡ÎÄ¼şºó×ºÃû#############################
+rem #############################ç»“æŸè·å–æ–‡ä»¶åç¼€å#############################.
 
 
 :Batch_Files_Rename_For_File_Is_Not_Suffix
-echo ÎÄ¼ş%Current_File_Name%µÄºó×ºÃûÎª¿Õ
+echo æ–‡ä»¶%Current_File_Name%çš„åç¼€åä¸ºç©º
 ren %Current_File_Name% %Batch_Files_Rename_prefix%%Batch_Files_Rename_Suffix%
 
 
 gotO :eof
 
 :Batch_Files_Rename_For_File_Is_Have_Suffix
-echo ÎÄ¼ş%Current_File_Name%µÄºó×ºÃûÎª:%Fiel_Suffiex%
+echo æ–‡ä»¶%Current_File_Name%çš„åç¼€åä¸º:%Fiel_Suffiex%
 if "%bDebug%"=="1" (
-    echo ½«%Current_File_Name% ÖØÃüÃûÎª %Batch_Files_Rename_prefix%%Batch_Files_Rename_Suffix%%Fiel_Suffiex%
+    echo å°†%Current_File_Name% é‡å‘½åä¸º %Batch_Files_Rename_prefix%%Batch_Files_Rename_Suffix%%Fiel_Suffiex%
     pause
 )
 
 ren %Current_File_Name% %Batch_Files_Rename_prefix%%Batch_Files_Rename_Suffix%%Fiel_Suffiex%
 gotO :eof
 
-rem ######################################ÎÄ¼şÖØÃüÃûEnd#####################################
-
-
-
-
-
-
-
-
-
-
+rem ######################################æ–‡ä»¶é‡å‘½åEnd#####################################.
